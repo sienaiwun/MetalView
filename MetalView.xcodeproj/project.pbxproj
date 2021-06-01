@@ -15,6 +15,9 @@
 		98D5A644266502420030D568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D5A642266502420030D568 /* LaunchScreen.storyboard */; };
 		98D5A66B2665025A0030D568 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66A2665025A0030D568 /* MetalView.swift */; };
 		98D5A670266607990030D568 /* MetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66F266607990030D568 /* MetalShader.metal */; };
+		98D5A68D266628DA0030D568 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A68C266628DA0030D568 /* Engine.swift */; };
+		98D5A69326662BD30030D568 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69226662BD30030D568 /* ShaderLibrary.swift */; };
+		98D5A696266639A80030D568 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A695266639A80030D568 /* Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		98D5A645266502420030D568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D5A66A2665025A0030D568 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		98D5A66F266607990030D568 /* MetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalShader.metal; sourceTree = "<group>"; };
+		98D5A68C266628DA0030D568 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		98D5A69226662BD30030D568 /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
+		98D5A695266639A80030D568 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,9 @@
 		98D5A62B266502410030D568 = {
 			isa = PBXGroup;
 			children = (
+				98D5A68F26662B550030D568 /* Resources */,
+				98D5A68B2666275F0030D568 /* Library */,
+				98D5A68A266627450030D568 /* EngineFile */,
 				98D5A67D26661AB90030D568 /* WindowFile */,
 				98D5A636266502410030D568 /* MetalView */,
 				98D5A635266502410030D568 /* Products */,
@@ -63,7 +72,6 @@
 			children = (
 				98D5A63D266502410030D568 /* Main.storyboard */,
 				98D5A66A2665025A0030D568 /* MetalView.swift */,
-				98D5A66F266607990030D568 /* MetalShader.metal */,
 			);
 			path = MetalView;
 			sourceTree = "<group>";
@@ -79,6 +87,39 @@
 				98D5A645266502420030D568 /* Info.plist */,
 			);
 			path = WindowFile;
+			sourceTree = "<group>";
+		};
+		98D5A68A266627450030D568 /* EngineFile */ = {
+			isa = PBXGroup;
+			children = (
+				98D5A68C266628DA0030D568 /* Engine.swift */,
+				98D5A695266639A80030D568 /* Types.swift */,
+			);
+			path = EngineFile;
+			sourceTree = "<group>";
+		};
+		98D5A68B2666275F0030D568 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				98D5A69226662BD30030D568 /* ShaderLibrary.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		98D5A68F26662B550030D568 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98D5A69026662B5F0030D568 /* Shaders */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		98D5A69026662B5F0030D568 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				98D5A66F266607990030D568 /* MetalShader.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D5A66B2665025A0030D568 /* MetalView.swift in Sources */,
+				98D5A68D266628DA0030D568 /* Engine.swift in Sources */,
 				98D5A63C266502410030D568 /* ViewController.swift in Sources */,
+				98D5A696266639A80030D568 /* Types.swift in Sources */,
 				98D5A670266607990030D568 /* MetalShader.metal in Sources */,
+				98D5A69326662BD30030D568 /* ShaderLibrary.swift in Sources */,
 				98D5A638266502410030D568 /* AppDelegate.swift in Sources */,
 				98D5A63A266502410030D568 /* SceneDelegate.swift in Sources */,
 			);
