@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980693192668FCB00012A983 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980693182668FCB00012A983 /* Renderer.swift */; };
+		980693212669001D0012A983 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980693202669001D0012A983 /* Triangle.swift */; };
 		98D5A638266502410030D568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A637266502410030D568 /* AppDelegate.swift */; };
 		98D5A63A266502410030D568 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A639266502410030D568 /* SceneDelegate.swift */; };
 		98D5A63C266502410030D568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A63B266502410030D568 /* ViewController.swift */; };
@@ -19,9 +21,14 @@
 		98D5A69326662BD30030D568 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69226662BD30030D568 /* ShaderLibrary.swift */; };
 		98D5A696266639A80030D568 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A695266639A80030D568 /* Types.swift */; };
 		98D5A699266660780030D568 /* VertexDescriptionLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A698266660780030D568 /* VertexDescriptionLibrary.swift */; };
+		98D5A69C2667B9920030D568 /* RenderPipelineDescriptorLibary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69B2667B9920030D568 /* RenderPipelineDescriptorLibary.swift */; };
+		98D5A69F2667BD090030D568 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69E2667BD090030D568 /* Defines.swift */; };
+		98D5A6A22667BE2A0030D568 /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A6A12667BE2A0030D568 /* RenderPipelineStateLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		980693182668FCB00012A983 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		980693202669001D0012A983 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		98D5A634266502410030D568 /* MetalView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D5A637266502410030D568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D5A639266502410030D568 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +43,9 @@
 		98D5A69226662BD30030D568 /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
 		98D5A695266639A80030D568 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		98D5A698266660780030D568 /* VertexDescriptionLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptionLibrary.swift; sourceTree = "<group>"; };
+		98D5A69B2667B9920030D568 /* RenderPipelineDescriptorLibary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineDescriptorLibary.swift; sourceTree = "<group>"; };
+		98D5A69E2667BD090030D568 /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
+		98D5A6A12667BE2A0030D568 /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9806931B2668FFD00012A983 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				980693202669001D0012A983 /* Triangle.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		98D5A62B266502410030D568 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +112,10 @@
 		98D5A68A266627450030D568 /* EngineFile */ = {
 			isa = PBXGroup;
 			children = (
+				9806931B2668FFD00012A983 /* Scene */,
 				98D5A68C266628DA0030D568 /* Engine.swift */,
 				98D5A695266639A80030D568 /* Types.swift */,
+				980693182668FCB00012A983 /* Renderer.swift */,
 			);
 			path = EngineFile;
 			sourceTree = "<group>";
@@ -105,6 +125,9 @@
 			children = (
 				98D5A69226662BD30030D568 /* ShaderLibrary.swift */,
 				98D5A698266660780030D568 /* VertexDescriptionLibrary.swift */,
+				98D5A69B2667B9920030D568 /* RenderPipelineDescriptorLibary.swift */,
+				98D5A6A12667BE2A0030D568 /* RenderPipelineStateLibrary.swift */,
+				98D5A69E2667BD090030D568 /* Defines.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -196,10 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D5A66B2665025A0030D568 /* MetalView.swift in Sources */,
+				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
 				98D5A699266660780030D568 /* VertexDescriptionLibrary.swift in Sources */,
 				98D5A68D266628DA0030D568 /* Engine.swift in Sources */,
 				98D5A63C266502410030D568 /* ViewController.swift in Sources */,
+				980693212669001D0012A983 /* Triangle.swift in Sources */,
+				980693192668FCB00012A983 /* Renderer.swift in Sources */,
 				98D5A696266639A80030D568 /* Types.swift in Sources */,
+				98D5A6A22667BE2A0030D568 /* RenderPipelineStateLibrary.swift in Sources */,
+				98D5A69C2667B9920030D568 /* RenderPipelineDescriptorLibary.swift in Sources */,
 				98D5A670266607990030D568 /* MetalShader.metal in Sources */,
 				98D5A69326662BD30030D568 /* ShaderLibrary.swift in Sources */,
 				98D5A638266502410030D568 /* AppDelegate.swift in Sources */,
