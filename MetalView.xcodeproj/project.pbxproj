@@ -68,8 +68,8 @@
 		9806931B2668FFD00012A983 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				98069332266A5C950012A983 /* GameObject */,
 				98069323266904D30012A983 /* protocal */,
-				9806932F266A592A0012A983 /* GameObject.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -80,6 +80,14 @@
 				9806932426690F000012A983 /* Renderable.swift */,
 			);
 			path = protocal;
+			sourceTree = "<group>";
+		};
+		98069332266A5C950012A983 /* GameObject */ = {
+			isa = PBXGroup;
+			children = (
+				9806932F266A592A0012A983 /* GameObject.swift */,
+			);
+			path = GameObject;
 			sourceTree = "<group>";
 		};
 		98D5A62B266502410030D568 = {

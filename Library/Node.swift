@@ -1,8 +1,10 @@
-//
-//  Node.swift
-//  MetalView
-//
-//  Created by sws on 2021/6/3.
-//
+import MetalKit
 
-import Foundation
+public class Node{
+    func render(_ renderCommandEncoder: MTLRenderCommandEncoder!){
+        if let rendable = self as? Renderable
+        {
+            rendable.doRender(renderCommandEncoder);
+        }
+    }
+}

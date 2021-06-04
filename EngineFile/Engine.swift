@@ -5,4 +5,22 @@
 //  Created by sws on 2021/6/1.
 //
 
-import Foundation
+import MetalKit
+
+class Engine
+{
+    public static var Device: MTLDevice!
+    public static var CommandQueue: MTLCommandQueue!
+    
+    public static func Ignite(device: MTLDevice)
+    {
+        self.Device = device
+        self.CommandQueue = self.Device.makeCommandQueue()
+        
+        ShaderLibrary.initialize()
+        VertexDescriptionLibrary.initialize()
+        RenderPipelineDescriptorLibrary.initialize()
+        RenderPipelineStateLibrary.initialize()
+        MeshLibrary.Initialize()
+    }
+}

@@ -1,28 +1,27 @@
-//
-//  MetalShader.metal
-//  MetalView
-//
-//  Created by sws on 2021/6/1.
-//
-
 #include <metal_stdlib>
 using namespace metal;
 
+struct VertexIn{
+    float3 position [[ attribute(0) ]];
+    float4 color [[ attribute(1) ]];
+};
 
-//Basic vertex shader.  This doesn't do jack.
+struct RasterizerData{
+    float4 position [[ position ]];
+    float4 color;
+};
 
-//vertex = type of shader
-//float4 = return type
-//basic_vertex_shader = name of the shader.  This should match the vertex function in swift.
-vertex float4 basic_vertex_shader(){
-    return float4(1);
+vertex RasterizerData basic_vertex_shader(const VertexIn vIn [[ stage_in ]]){
+    RasterizerData rd;
+    
+    rd.position = float4(vIn.position, 1);
+    rd.color = vIn.color;
+    
+    return rd;
 }
 
-//Likewise for the basic fragment shader
-
-//fragment = type of shader
-//half4 = return type
-//basic_fragmeent_shader = name of the shader.  This should match the vertex function in swift.
-fragment half4 basic_fragment_shader(){
-    return half4(1);
+fragment half4 basic_fragment_shader(RasterizerData rd [[ stage_in ]]){
+    float4 color = rd.color;
+                                                        
+    return half4(0.0, 1.6, 0.0, 1.0);
 }

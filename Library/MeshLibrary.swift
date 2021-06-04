@@ -1,8 +1,80 @@
-//
-//  MeshLibrary.swift
-//  MetalView
-//
-//  Created by sws on 2021/6/4.
-//
+import MetalKit
 
-import Foundation
+enum MeshTypes {
+    case Triangle
+    case Rectangle
+}
+
+protocol Mesh {
+    var vertexBuffer: MTLBuffer! {get}
+    var vertexNum:Int {get}
+}
+
+class MeshLibrary {
+    
+    private static var meshes: [MeshTypes:Mesh] = [:]
+    
+    public static func Initialize(){
+        createDefaultMeshes()
+    }
+    
+    private static func createDefaultMeshes(){
+        meshes.updateValue(Triangle(), forKey: .Triangle)
+        meshes.updateValue(Rectangle(), forKey: .Rectangle)
+    }
+    
+    public static func Mesh(_ meshType: MeshTypes)->Mesh{
+        return meshes[meshType]!
+    }
+    
+}
+
+
+class Primitive : Mesh {
+    var vertexBuffer: MTLBuffer!
+    var vertices:[Vertex]!
+    var vertexNum:Int {
+        get
+        {
+            return vertices.count;
+        }
+    }
+    func  createVertex()
+    {
+        
+    }
+    func  createBuffers(){
+        vertexBuffer = Engine.Device?.makeBuffer(bytes: vertices, length: Vertex.stride(vertices.count), options: [])
+        vertexBuffer.label = "vertex buffer"
+    }
+    init()
+    {
+        createVertex()
+        createBuffers()
+    }
+}
+
+class Triangle: Primitive{
+    override func createVertex() {
+        vertices = [
+                    Vertex(position: FLOAT3( 0, 1,0), color: FLOAT4(1,0,0,1)),
+                    Vertex(position: FLOAT3(-1,-1,0), color: FLOAT4(0,1,0,1)),
+                    Vertex(position: FLOAT3( 1,-1,0), color: FLOAT4(0,0,1,1))
+                ]
+    }
+}
+
+class Rectangle: Primitive{
+    override func createVertex() {
+        vertices = [
+                    Vertex(position: float3( 0.5, 0.5,0), color: float4(1,0,0,1)), //Top Right
+                    Vertex(position: float3(-0.5, 0.5,0), color: float4(0,1,0,1)), //Top Left
+                    Vertex(position: float3(-0.5,-0.5,0), color: float4(0,0,1,1)),  //Bottom Left
+                    
+                    Vertex(position: float3( 0.5, 0.5,0), color: float4(1,0,0,1)), //Top Right
+                    Vertex(position: float3(-0.5,-0.5,0), color: float4(0,0,1,1)), //Bottom Left
+                    Vertex(position: float3( 0.5,-0.5,0), color: float4(1,0,1,1))  //Bottom Right
+                ]
+    }
+}
+
