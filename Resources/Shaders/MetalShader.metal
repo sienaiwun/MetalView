@@ -11,10 +11,16 @@ struct RasterizerData{
     float4 color;
 };
 
-vertex RasterizerData basic_vertex_shader(const VertexIn vIn [[ stage_in ]]){
+struct PerDrawConstants
+{
+    float4x4 modelMatrix;
+};
+
+vertex RasterizerData basic_vertex_shader(const VertexIn vIn [[ stage_in ]],
+                                          constant PerDrawConstants &perdrawConstants[[buffer(1)]]){
     RasterizerData rd;
     
-    rd.position = float4(vIn.position, 1);
+    rd.position = perdrawConstants.modelMatrix * float4(vIn.position, 1);
     rd.color = vIn.color;
     
     return rd;

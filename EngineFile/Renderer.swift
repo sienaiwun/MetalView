@@ -12,6 +12,7 @@ class Renderer:NSObject, MTKViewDelegate{
         guard let drawable = view.currentDrawable, let rpd = view.currentRenderPassDescriptor else {return}
         let commandBuffer = Engine.CommandQueue?.makeCommandBuffer()
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: rpd);
+        triangel.update(deltaTime: 1.0/Float(view.preferredFramesPerSecond))
         triangel.render(commandEncoder)
         commandEncoder?.endEncoding()
         commandBuffer?.present(drawable)

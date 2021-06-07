@@ -67,13 +67,13 @@ class Triangle: Primitive{
 class Rectangle: Primitive{
     override func createVertex() {
         vertices = [
-                    Vertex(position: float3( 0.5, 0.5,0), color: float4(1,0,0,1)), //Top Right
-                    Vertex(position: float3(-0.5, 0.5,0), color: float4(0,1,0,1)), //Top Left
-                    Vertex(position: float3(-0.5,-0.5,0), color: float4(0,0,1,1)),  //Bottom Left
+                    Vertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1)), //Top Right
+                    Vertex(position: FLOAT3(-0.5, 0.5,0), color: FLOAT4(0,1,0,1)), //Top Left
+                    Vertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1)),  //Bottom Left
                     
-                    Vertex(position: float3( 0.5, 0.5,0), color: float4(1,0,0,1)), //Top Right
-                    Vertex(position: float3(-0.5,-0.5,0), color: float4(0,0,1,1)), //Bottom Left
-                    Vertex(position: float3( 0.5,-0.5,0), color: float4(1,0,1,1))  //Bottom Right
+                    Vertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1)), //Top Right
+                    Vertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1)), //Bottom Left
+                    Vertex(position: FLOAT3( 0.5,-0.5,0), color: FLOAT4(1,0,1,1))  //Bottom Right
                 ]
     }
 }
