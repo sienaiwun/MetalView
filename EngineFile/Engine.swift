@@ -21,6 +21,8 @@ class Engine
         VertexDescriptionLibrary.initialize()
         RenderPipelineDescriptorLibrary.initialize()
         RenderPipelineStateLibrary.initialize()
-        MeshLibrary.Initialize()
+        MeshLibrary.initialize()
+        TextureLibrary.initialize()
+        SamplerLibrary.initialize()
     }
 }

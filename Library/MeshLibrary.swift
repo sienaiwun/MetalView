@@ -14,7 +14,7 @@ class MeshLibrary {
     
     private static var meshes: [MeshTypes:Mesh] = [:]
     
-    public static func Initialize(){
+    public static func initialize(){
         createDefaultMeshes()
     }
     
@@ -32,7 +32,7 @@ class MeshLibrary {
 
 class Primitive : Mesh {
     var vertexBuffer: MTLBuffer!
-    var vertices:[Vertex]!
+    var vertices:[Vertex]! = []
     var vertexNum:Int {
         get
         {
@@ -47,6 +47,12 @@ class Primitive : Mesh {
         vertexBuffer = Engine.Device?.makeBuffer(bytes: vertices, length: Vertex.stride(vertices.count), options: [])
         vertexBuffer.label = "vertex buffer"
     }
+    
+    func addVertex(position: FLOAT3,
+                     color: FLOAT4 = FLOAT4(1,0,1,1),
+                     texCoord: FLOAT2 = FLOAT2(0,0)) {
+            vertices.append(Vertex(position: position, color: color, texCoord: texCoord))
+      }
     init()
     {
         createVertex()
@@ -56,27 +62,25 @@ class Primitive : Mesh {
 
 class Triangle: Primitive{
     override func createVertex() {
-        vertices = [
-                    Vertex(position: FLOAT3( 0, 1,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)),
-                    Vertex(position: FLOAT3(-1,-1,0), color: FLOAT4(0,1,0,1), texCoord:FLOAT2(0,1)),
-                    Vertex(position: FLOAT3( 1,-1,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,0)),
-                ]
+        addVertex(position: FLOAT3( 0, 1,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0))
+        addVertex(position: FLOAT3(-1,-1,0), color: FLOAT4(0,1,0,1), texCoord:FLOAT2(0,1))
+        addVertex(position: FLOAT3( 1,-1,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,0))
     }
 }
 
 class Rectangle: Primitive{
     override func createVertex() {
-        vertices = [
-                    Vertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)), //Top Right
-                    Vertex(position: FLOAT3(-0.5, 0.5,0), color: FLOAT4(0,1,0,1), texCoord:FLOAT2(0,0)), //Top Left
-                    Vertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1)),  //Bottom Left
-                    
-                    Vertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)), //Top Right
-                    Vertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1)), //Bottom Left
-                    Vertex(position: FLOAT3( 0.5,-0.5,0), color: FLOAT4(1,0,1,1), texCoord:FLOAT2(1,1)),  //Bottom Right
-            
-  
-                ]
+        let loopNum = 1
+        for _ in 1...loopNum
+        {
+            addVertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
+            addVertex(position: FLOAT3(-0.5, 0.5,0), color: FLOAT4(0,1,0,1), texCoord:FLOAT2(0,0)) //Top Left
+            addVertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1))  //Bottom Left
+                        
+            addVertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
+            addVertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1)) //Bottom Left
+            addVertex(position: FLOAT3( 0.5,-0.5,0), color: FLOAT4(1,0,1,1), texCoord:FLOAT2(1,1))  //Bottom Right
+        }
     }
 }
 

@@ -30,6 +30,8 @@ extension GameObject: Renderable
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride(), index:1)
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
         renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
+        renderCommandEncoder.setFragmentTexture(TextureLibrary.Descriptor(.HighRes), index: 0)
+        renderCommandEncoder.setFragmentSamplerState(SamplerLibrary.Descriptor(.Bilinar), index: 0)
         renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexNum)
     }
 }

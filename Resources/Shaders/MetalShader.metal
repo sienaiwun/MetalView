@@ -29,8 +29,10 @@ vertex RasterizerData basic_vertex_shader(const VertexIn vIn [[ stage_in ]],
     return rd;
 }
 
-fragment half4 basic_fragment_shader(RasterizerData rd [[ stage_in ]]){
-    float4 color = rd.color;
-                                                        
-    return half4(rd.tc1.x,rd.tc1.y, 0.0, 1.0);
+fragment half4 basic_fragment_shader(RasterizerData rd [[ stage_in ]],
+                                     sampler sampler2d [[ sampler(0) ]],
+                                    texture2d<float> texture [[ texture(0) ]] ){
+    float4 color = texture.sample(sampler2d, rd.tc1 );
+   // float4 color = rd.color;
+    return half4(color.r, color.g, color.b, color.a);
 }
