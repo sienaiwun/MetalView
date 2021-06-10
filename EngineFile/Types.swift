@@ -1,6 +1,7 @@
 import simd
 public typealias FLOAT3 = SIMD3<Float>
 public typealias FLOAT4 = SIMD4<Float>
+public typealias FLOAT2 = SIMD2<Float>
 protocol datasize {
 }
 extension datasize{
@@ -14,12 +15,14 @@ extension datasize{
        }
 }
 
-
+extension FLOAT2: datasize { }
 extension FLOAT3: datasize { }
+extension FLOAT4: datasize { }
 
 struct Vertex: datasize{
     var position: FLOAT3
     var color: FLOAT4
+    var texCoord: FLOAT2
 }
 
 struct ModelConstants:datasize {
