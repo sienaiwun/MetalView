@@ -8,5 +8,5 @@
 import MetalKit
 
 class Defines{
-    public static var bgPixelColor:MTLPixelFormat = .bgr10_xr_srgb
+    public static var bgPixelColor:MTLPixelFormat = .bgra8Unorm_srgb
 }

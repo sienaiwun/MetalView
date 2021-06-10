@@ -37,7 +37,7 @@ class Basic_RenderPipelineDescriptor:RenderPipelineDescriptor
     var renderPipelineDescriptor: MTLRenderPipelineDescriptor
     {
         let renderPipelineDescriptor = MTLRenderPipelineDescriptor()
-        renderPipelineDescriptor.colorAttachments[0].isBlendingEnabled = true
+        renderPipelineDescriptor.colorAttachments[0].isBlendingEnabled = false
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = Defines.bgPixelColor
         renderPipelineDescriptor.vertexFunction = ShaderLibrary.Vertex(.Basic)
         renderPipelineDescriptor.fragmentFunction = ShaderLibrary.Fragment(.Basic)

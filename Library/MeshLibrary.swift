@@ -3,6 +3,7 @@ import MetalKit
 enum MeshTypes {
     case Triangle
     case Rectangle
+    case Box
 }
 
 protocol Mesh {
@@ -21,6 +22,7 @@ class MeshLibrary {
     private static func createDefaultMeshes(){
         meshes.updateValue(Triangle(), forKey: .Triangle)
         meshes.updateValue(Rectangle(), forKey: .Rectangle)
+        meshes.updateValue(Box(), forKey: .Box)
     }
     
     public static func Mesh(_ meshType: MeshTypes)->Mesh{
@@ -82,5 +84,58 @@ class Rectangle: Primitive{
             addVertex(position: FLOAT3( 0.5,-0.5,0), color: FLOAT4(1,0,1,1), texCoord:FLOAT2(1,1))  //Bottom Right
         }
     }
+}
+
+class Box: Primitive {
+    override func createVertex() {
+        //Left
+        addVertex(position: FLOAT3(-1.0,-1.0,-1.0), color: FLOAT4(1.0, 0.5, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0, 1.0), color: FLOAT4(0.0, 1.0, 0.5, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0, 1.0), color: FLOAT4(0.0, 0.5, 1.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0,-1.0), color: FLOAT4(1.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0, 1.0), color: FLOAT4(0.0, 1.0, 1.0, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0,-1.0), color: FLOAT4(1.0, 0.0, 1.0, 1.0))
+        
+        //RIGHT
+        addVertex(position: FLOAT3( 1.0, 1.0, 1.0), color: FLOAT4(1.0, 0.0, 0.5, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0,-1.0), color: FLOAT4(0.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3( 1.0, 1.0,-1.0), color: FLOAT4(0.0, 0.5, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0,-1.0), color: FLOAT4(1.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3( 1.0, 1.0, 1.0), color: FLOAT4(0.0, 1.0, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0, 1.0), color: FLOAT4(1.0, 0.5, 1.0, 1.0))
+        
+        //TOP
+        addVertex(position: FLOAT3( 1.0, 1.0, 1.0), color: FLOAT4(1.0, 0.0, 0.0, 1.0))
+        addVertex(position: FLOAT3( 1.0, 1.0,-1.0), color: FLOAT4(0.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0,-1.0), color: FLOAT4(0.0, 0.0, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0, 1.0, 1.0), color: FLOAT4(1.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0,-1.0), color: FLOAT4(0.5, 1.0, 1.0, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0, 1.0), color: FLOAT4(1.0, 0.0, 1.0, 1.0))
+        
+        //BOTTOM
+        addVertex(position: FLOAT3( 1.0,-1.0, 1.0), color: FLOAT4(1.0, 0.5, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0,-1.0), color: FLOAT4(0.5, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0,-1.0), color: FLOAT4(0.0, 0.0, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0, 1.0), color: FLOAT4(1.0, 1.0, 0.5, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0, 1.0), color: FLOAT4(0.0, 1.0, 1.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0,-1.0), color: FLOAT4(1.0, 0.5, 1.0, 1.0))
+        
+        //BACK
+        addVertex(position: FLOAT3( 1.0, 1.0,-1.0), color: FLOAT4(1.0, 0.5, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0,-1.0), color: FLOAT4(0.5, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0,-1.0), color: FLOAT4(0.0, 0.0, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0, 1.0,-1.0), color: FLOAT4(1.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0,-1.0), color: FLOAT4(0.0, 1.0, 1.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0,-1.0), color: FLOAT4(1.0, 0.5, 1.0, 1.0))
+        
+        //FRONT
+        addVertex(position: FLOAT3(-1.0, 1.0, 1.0), color: FLOAT4(1.0, 0.5, 0.0, 1.0))
+        addVertex(position: FLOAT3(-1.0,-1.0, 1.0), color: FLOAT4(0.0, 1.0, 0.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0, 1.0), color: FLOAT4(0.5, 0.0, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0, 1.0, 1.0), color: FLOAT4(1.0, 1.0, 0.5, 1.0))
+        addVertex(position: FLOAT3(-1.0, 1.0, 1.0), color: FLOAT4(0.0, 1.0, 1.0, 1.0))
+        addVertex(position: FLOAT3( 1.0,-1.0, 1.0), color: FLOAT4(1.0, 0.0, 1.0, 1.0))
+    }
+
 }
 
