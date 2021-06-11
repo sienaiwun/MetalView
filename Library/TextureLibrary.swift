@@ -2,14 +2,16 @@ import MetalKit
 enum TextureType{
     case Basic
     case HighRes
+    case RT1024
 }
 
 class TextureLibrary{
     private static var library:[TextureType:Texture] = [:]
     private static func initValues()
     {
-        library.updateValue(Texture("rename", ext: "jpeg"), forKey: .Basic)
-        library.updateValue(Texture("high_res", ext: "jpeg"), forKey: .HighRes)
+        library.updateValue(AssetTexture("rename", ext: "jpeg"), forKey: .Basic)
+        library.updateValue(AssetTexture("high_res", ext: "jpeg"), forKey: .HighRes)
+        library.updateValue(RTTexture(textureSizeX:1024,textureSizeY:1024), forKey: .RT1024)
     }
     public static func initialize(){
         initValues()
@@ -20,7 +22,26 @@ class TextureLibrary{
     }
 }
 
-class Texture {
+protocol Texture {
+    var texture: MTLTexture! {get}
+}
+
+class RTTexture: Texture
+{
+    var texture: MTLTexture!
+    init( textureSizeX:Int, textureSizeY:Int, pixelFormat:MTLPixelFormat = .rgba8Unorm_srgb)
+    {
+        let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: pixelFormat, width:textureSizeX, height: textureSizeY, mipmapped: false)
+              
+        textureDescriptor.usage = [MTLTextureUsage.shaderWrite, MTLTextureUsage.shaderRead ]
+        textureDescriptor.storageMode = .private
+        texture = Engine.Device.makeTexture(descriptor: textureDescriptor)
+        texture?.label = "RT Texture"
+    }
+    
+}
+
+class AssetTexture : Texture{
     var texture: MTLTexture!
     
     init(_ textureName: String, ext: String = "jpeg", origin: MTKTextureLoader.Origin = .topLeft){

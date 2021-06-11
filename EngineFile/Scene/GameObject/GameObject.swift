@@ -14,7 +14,6 @@ public class GameObject:Node
     
     override func update(deltaTime:Float)
     {
-        //self.position = self.position + (FLOAT3(0.01,0,0))
         updateModelConstants()
     }
     
