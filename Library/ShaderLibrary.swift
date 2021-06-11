@@ -15,12 +15,17 @@ enum FragmentShaderTypes {
     case Basic
 }
 
+enum ComputeShaderTypes{
+    case Basic
+}
+
 class ShaderLibrary{
     public static var DefaultLibrary: MTLLibrary!
     
-    private static var vertexShaders :[VertexShaderTypes:Basic_VertexShader] = [:]
-    private static var fragmentShaders :[FragmentShaderTypes:Basic_FragmentShader] = [:]
-
+    private static var vertexShaders :[VertexShaderTypes:Shader] = [:]
+    private static var fragmentShaders :[FragmentShaderTypes:Shader] = [:]
+    private static var computerShaders :[ComputeShaderTypes:Shader] = [:]
+    
     public static func initialize()
     {
         DefaultLibrary = Engine.Device.makeDefaultLibrary()
@@ -29,6 +34,7 @@ class ShaderLibrary{
     private static func InitValues(){
         vertexShaders.updateValue( Basic_VertexShader(), forKey: .Basic)
         fragmentShaders.updateValue( Basic_FragmentShader(), forKey: .Basic)
+        computerShaders.updateValue(Basic_ComputeShader(), forKey: .Basic)
     }
     
     public static func Vertex(_ vertexShaderType:VertexShaderTypes) ->MTLFunction{
@@ -37,6 +43,10 @@ class ShaderLibrary{
     
     public static func Fragment(_ fragmentShaderType:FragmentShaderTypes) ->MTLFunction{
         return fragmentShaders[fragmentShaderType]!.function
+    }
+    
+    public static func Compute(_ computeShaderTypes:ComputeShaderTypes) ->MTLFunction{
+        return computerShaders[computeShaderTypes]!.function
     }
 }
 
@@ -67,3 +77,15 @@ public struct Basic_FragmentShader:Shader{
         return function!
     }
 }
+
+public struct Basic_ComputeShader:Shader{
+    public var name: String = "Basic Compute Shader"
+    public var functionName: String = "testShader"
+    public var function: MTLFunction{
+        let function = ShaderLibrary.DefaultLibrary.makeFunction(name: functionName)
+        function?.label = name
+        return function!
+    }
+}
+
+

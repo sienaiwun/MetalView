@@ -5,6 +5,9 @@ public class GameObject:Node
     // Renderable Gmae Object
     var mesh: Mesh!
     var modelConstants:ModelConstants = ModelConstants()
+    
+    public var texture:MTLTexture?
+   
     init(meshType: MeshTypes) {
         mesh = MeshLibrary.Mesh(meshType)
     }
@@ -24,12 +27,13 @@ public class GameObject:Node
 
 extension GameObject: Renderable
 {
+    
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder!)
     {
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride(), index:1)
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
         renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
-        renderCommandEncoder.setFragmentTexture(TextureLibrary.Descriptor(.Basic), index: 0)
+        renderCommandEncoder.setFragmentTexture(texture!, index: 0)
         renderCommandEncoder.setFragmentSamplerState(SamplerLibrary.Descriptor(.Bilinar), index: 0)
         renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexNum)
     }
