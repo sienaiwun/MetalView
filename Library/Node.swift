@@ -40,4 +40,12 @@ public class Node{
             rendable.doRender(renderCommandEncoder);
         }
     }
+    
+    func compute(_ computeEncoder: MTLComputeCommandEncoder!)
+    {
+        if let computable = self as? Computable
+        {
+            computable.doCompute(computeEncoder)
+        }
+    }
 }
