@@ -7,8 +7,8 @@ class MetalView: MTKView {
         super.init(coder:coder)
         device = MTLCreateSystemDefaultDevice()
         Engine.Ignite(device: device!)
-        clearColor = MTLClearColor(red: 0, green: 0.0, blue: 0.0, alpha: 1)
-        colorPixelFormat = Defines.bgPixelColor
+        clearColor = Defines.clearColor
+        colorPixelFormat = Defines.bgPixelFormat
         render = Renderer()
         self.delegate = render
     }

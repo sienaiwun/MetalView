@@ -8,5 +8,7 @@
 import MetalKit
 
 class Defines{
-    public static var bgPixelColor:MTLPixelFormat = .bgra8Unorm_srgb
+    public static let bgPixelFormat:MTLPixelFormat = .bgra8Unorm_srgb
+    public static let clearColor:MTLClearColor = MTLClearColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+    
 }
