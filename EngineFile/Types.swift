@@ -28,3 +28,15 @@ struct Vertex: datasize{
 struct ModelConstants:datasize {
     var modelMatrix  = matrix_identity_float4x4
 }
+
+struct BufferConstants:datasize
+{
+    var mWidth :Float = 0
+    var mHeight:Float = 0
+    var mRenderSoftShadows:Float = 0
+    var _tap:Float = 0
+    var mSpeed:Float = 0.0
+    var mEpsilon:Float = 0.0
+    var time:Float = 0.0
+    var _tap2:Float = 0.0
+}

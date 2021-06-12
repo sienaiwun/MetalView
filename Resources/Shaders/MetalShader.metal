@@ -33,13 +33,6 @@ fragment half4 basic_fragment_shader(RasterizerData rd [[ stage_in ]],
                                      sampler sampler2d [[ sampler(0) ]],
                                     texture2d<float> texture [[ texture(0) ]] ){
     float4 color = texture.sample(sampler2d, rd.tc1 );
- // float4 color = rd.color;
     return half4(color.r, color.g, color.b, color.a);
 }
 
-kernel void testShader( texture2d<float, access::write> outTexture [[texture(0)]],
-                       uint2 gid [[thread_position_in_grid]])
-{
-    const float4 outColor = float4(1.0,1.0f,0.0f,1.0f);
-    outTexture.write(outColor, gid);
-}

@@ -75,13 +75,14 @@ class Rectangle: Primitive{
         let loopNum = 1
         for _ in 1...loopNum
         {
-            addVertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
-            addVertex(position: FLOAT3(-0.5, 0.5,0), color: FLOAT4(0,1,0,1), texCoord:FLOAT2(0,0)) //Top Left
-            addVertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1))  //Bottom Left
+            let half_size:Float = 1.0;
+            addVertex(position: FLOAT3( half_size, half_size,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
+            addVertex(position: FLOAT3(-half_size, half_size,0), color: FLOAT4(0,1,0,1), texCoord:FLOAT2(0,0)) //Top Left
+            addVertex(position: FLOAT3(-half_size,-half_size,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1))  //Bottom Left
                         
-            addVertex(position: FLOAT3( 0.5, 0.5,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
-            addVertex(position: FLOAT3(-0.5,-0.5,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1)) //Bottom Left
-            addVertex(position: FLOAT3( 0.5,-0.5,0), color: FLOAT4(1,0,1,1), texCoord:FLOAT2(1,1))  //Bottom Right
+            addVertex(position: FLOAT3( half_size, half_size,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
+            addVertex(position: FLOAT3(-half_size,-half_size,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1)) //Bottom Left
+            addVertex(position: FLOAT3( half_size,-half_size,0), color: FLOAT4(1,0,1,1), texCoord:FLOAT2(1,1))  //Bottom Right
         }
     }
 }

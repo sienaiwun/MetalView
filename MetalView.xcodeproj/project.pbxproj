@@ -34,6 +34,7 @@
 		98D5A6A22667BE2A0030D568 /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A6A12667BE2A0030D568 /* RenderPipelineStateLibrary.swift */; };
 		98E969BA26735F05007BAA90 /* ComputeRenderPipelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969B926735F05007BAA90 /* ComputeRenderPipelineState.swift */; };
 		98E969BD26738EEB007BAA90 /* Computable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BC26738EEB007BAA90 /* Computable.swift */; };
+		98E969C0267392EC007BAA90 /* ComputeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BF267392EC007BAA90 /* ComputeShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		98D5A6A12667BE2A0030D568 /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
 		98E969B926735F05007BAA90 /* ComputeRenderPipelineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeRenderPipelineState.swift; sourceTree = "<group>"; };
 		98E969BC26738EEB007BAA90 /* Computable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computable.swift; sourceTree = "<group>"; };
+		98E969BF267392EC007BAA90 /* ComputeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ComputeShader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				98D5A66F266607990030D568 /* MetalShader.metal */,
+				98E969BF267392EC007BAA90 /* ComputeShader.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E969C0267392EC007BAA90 /* ComputeShader.metal in Sources */,
 				98D5A66B2665025A0030D568 /* MetalView.swift in Sources */,
 				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
 				98069338266DCC540012A983 /* Matrix.swift in Sources */,

@@ -5,8 +5,10 @@ public class GameObject:Node
     // Renderable Gmae Object
     var mesh: Mesh!
     var modelConstants:ModelConstants = ModelConstants()
+    var computeConstants:BufferConstants = BufferConstants()
     
     var texture: MTLTexture!
+    var s_time:Float = 0
    
     init(meshType: MeshTypes, texture : MTLTexture) {
         mesh = MeshLibrary.Mesh(meshType)
@@ -15,6 +17,13 @@ public class GameObject:Node
     
     override func update(deltaTime:Float)
     {
+        s_time += deltaTime
+        computeConstants.mRenderSoftShadows = 1;
+        computeConstants.mEpsilon = 0.15;
+        computeConstants.mSpeed = 1;
+        computeConstants.mWidth = Float(texture.width);
+        computeConstants.mHeight = Float(texture.height);
+        computeConstants.time = s_time;
         updateModelConstants()
     }
     
@@ -44,6 +53,7 @@ extension GameObject: Computable
         let threadGroupCount = MTLSizeMake(16, 16, 1)
         let threadGroups = MTLSizeMake(Int(texture.width) / threadGroupCount.width+1, Int(texture.height) / threadGroupCount.height + 1, 1)
         computeEncoder.setTexture(texture, index: 0)
+        computeEncoder.setBytes(&computeConstants, length: BufferConstants.stride(), index: 0)
         computeEncoder.setComputePipelineState(ComputePipelineStateLibrary.PipelineState(.Basic))
         computeEncoder.dispatchThreadgroups(threadGroups, threadsPerThreadgroup: threadGroupCount)
     }
