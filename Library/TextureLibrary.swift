@@ -2,7 +2,8 @@ import MetalKit
 enum TextureType{
     case Basic
     case HighRes
-    case RT1024
+    case RT
+
 }
 
 class TextureLibrary{
@@ -11,7 +12,7 @@ class TextureLibrary{
     {
         library.updateValue(AssetTexture("rename", ext: "jpeg"), forKey: .Basic)
         library.updateValue(AssetTexture("high_res", ext: "jpeg"), forKey: .HighRes)
-        library.updateValue(RTTexture(textureSizeX:4096,textureSizeY:4096), forKey: .RT1024)
+        library.updateValue(RTTexture(textureSizeX:4096,textureSizeY:4096), forKey: .RT)
     }
     public static func initialize(){
         initValues()

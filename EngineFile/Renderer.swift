@@ -2,7 +2,7 @@ import MetalKit
 
 class Renderer:NSObject, MTKViewDelegate{
     //var triangle:Triangle = Triangle()
-    var singleObject:GameObject = GameObject(meshType: .Rectangle, texture: TextureLibrary.Descriptor(.RT1024))
+    var singleObject:GameObject = GameObject(meshType: .Rectangle, texture: TextureLibrary.Descriptor(.RT))
     let debugName:String = "Debugger"
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         
@@ -25,7 +25,6 @@ class Renderer:NSObject, MTKViewDelegate{
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: rpd);
         commandEncoder?.label = "Graph Encoder"
         commandEncoder?.pushDebugGroup(debugName)
-        singleObject.texture = TextureLibrary.Descriptor(.RT1024)
         singleObject.render(commandEncoder)
         commandEncoder?.popDebugGroup()
         commandEncoder?.endEncoding()
