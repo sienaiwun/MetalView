@@ -25,6 +25,7 @@ class Renderer:NSObject, MTKViewDelegate{
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: rpd);
         commandEncoder?.label = "Graph Encoder"
         commandEncoder?.pushDebugGroup(debugName)
+        singleObject.color_texture = TextureLibrary.Descriptor(.RT) 
         singleObject.render(commandEncoder)
         commandEncoder?.popDebugGroup()
         commandEncoder?.endEncoding()

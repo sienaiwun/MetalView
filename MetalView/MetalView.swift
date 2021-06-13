@@ -9,6 +9,7 @@ class MetalView: MTKView {
         Engine.Ignite(device: device!)
         clearColor = Defines.clearColor
         colorPixelFormat = Defines.bgPixelFormat
+        depthStencilPixelFormat = Defines.bgDepthPixelFormatl
         render = Renderer()
         self.delegate = render
     }

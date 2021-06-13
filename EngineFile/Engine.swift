@@ -21,6 +21,7 @@ class Engine
         VertexDescriptionLibrary.initialize()
         RenderPipelineDescriptorLibrary.initialize()
         RenderPipelineStateLibrary.initialize()
+        DepthStencilStateLibrary.initialize()
         ComputePipelineStateLibrary.initialize()
         MeshLibrary.initialize()
         TextureLibrary.initialize()
