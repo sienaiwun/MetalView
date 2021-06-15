@@ -18,6 +18,7 @@ public class GameObject:Node
     override func update(deltaTime:Float)
     {
         s_time += deltaTime
+        setRotationX(s_time*0.02)
         computeConstants.mRenderSoftShadows = 1;
         computeConstants.mEpsilon = 0.15;
         computeConstants.mSpeed = 1;

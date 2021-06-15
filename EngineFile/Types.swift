@@ -29,6 +29,13 @@ struct ModelConstants:datasize {
     var modelMatrix  = matrix_identity_float4x4
 }
 
+struct SceneConstants:datasize
+{
+    var viewMatrix = matrix_identity_float4x4
+    var projectionMatrix = matrix_identity_float4x4
+    var cameraPos:FLOAT3 = FLOAT3(0,0,0)
+}
+
 struct BufferConstants:datasize
 {
     var mWidth :Float = 0

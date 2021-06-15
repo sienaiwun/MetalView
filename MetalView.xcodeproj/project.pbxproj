@@ -36,6 +36,8 @@
 		98E969BD26738EEB007BAA90 /* Computable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BC26738EEB007BAA90 /* Computable.swift */; };
 		98E969C0267392EC007BAA90 /* ComputeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BF267392EC007BAA90 /* ComputeShader.metal */; };
 		98E969C32674941C007BAA90 /* DepthStencilStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969C22674941C007BAA90 /* DepthStencilStateLibrary.swift */; };
+		98E969C62675E5FC007BAA90 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969C52675E5FC007BAA90 /* Camera.swift */; };
+		98E969CC2678494A007BAA90 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969CB2678494A007BAA90 /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		98E969BC26738EEB007BAA90 /* Computable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computable.swift; sourceTree = "<group>"; };
 		98E969BF267392EC007BAA90 /* ComputeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ComputeShader.metal; sourceTree = "<group>"; };
 		98E969C22674941C007BAA90 /* DepthStencilStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateLibrary.swift; sourceTree = "<group>"; };
+		98E969C52675E5FC007BAA90 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		98E969CB2678494A007BAA90 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				9806932F266A592A0012A983 /* GameObject.swift */,
+				98E969C52675E5FC007BAA90 /* Camera.swift */,
+				98E969CB2678494A007BAA90 /* Scene.swift */,
 			);
 			path = GameObject;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				98D5A66B2665025A0030D568 /* MetalView.swift in Sources */,
 				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
 				98069338266DCC540012A983 /* Matrix.swift in Sources */,
+				98E969CC2678494A007BAA90 /* Scene.swift in Sources */,
 				98D5A699266660780030D568 /* VertexDescriptionLibrary.swift in Sources */,
 				9806932526690F000012A983 /* Renderable.swift in Sources */,
 				98D5A68D266628DA0030D568 /* Engine.swift in Sources */,
@@ -309,6 +316,7 @@
 				98D5A69C2667B9920030D568 /* RenderPipelineDescriptorLibary.swift in Sources */,
 				980693292669110A0012A983 /* Node.swift in Sources */,
 				98D5A670266607990030D568 /* MetalShader.metal in Sources */,
+				98E969C62675E5FC007BAA90 /* Camera.swift in Sources */,
 				98D5A69326662BD30030D568 /* ShaderLibrary.swift in Sources */,
 				98D5A638266502410030D568 /* AppDelegate.swift in Sources */,
 				98D5A63A266502410030D568 /* SceneDelegate.swift in Sources */,

@@ -2,8 +2,8 @@ import MetalKit
 
 class Renderer:NSObject, MTKViewDelegate{
     //var triangle:Triangle = Triangle()
-    var singleObject:GameObject = GameObject(meshType: .Rectangle, texture: TextureLibrary.Descriptor(.RT))
-    let debugName:String = "Debugger"
+    var currentScene:Scene = Scene(name:"Computer Example")
+    
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         
     }
@@ -12,22 +12,19 @@ class Renderer:NSObject, MTKViewDelegate{
     
     func draw(in view: MTKView) {
         guard let drawable = view.currentDrawable, let rpd = view.currentRenderPassDescriptor else {return}
-        singleObject.update(deltaTime: 1.0/Float(view.preferredFramesPerSecond))
+        currentScene.update(deltaTime: 1.0/Float(view.preferredFramesPerSecond))
         
         
         let commandBuffer = Engine.CommandQueue?.makeCommandBuffer()
         commandBuffer?.label = "command buffer"
         let computeEncoder = commandBuffer?.makeComputeCommandEncoder()
         computeEncoder?.label = "Compute Encoder"
-        singleObject.compute(computeEncoder)
+        currentScene.compute(computeEncoder)
         computeEncoder?.endEncoding()
         
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: rpd);
         commandEncoder?.label = "Graph Encoder"
-        commandEncoder?.pushDebugGroup(debugName)
-        singleObject.color_texture = TextureLibrary.Descriptor(.RT) 
-        singleObject.render(commandEncoder)
-        commandEncoder?.popDebugGroup()
+        currentScene.render(commandEncoder)
         commandEncoder?.endEncoding()
         commandBuffer?.present(drawable)
         commandBuffer?.commit()

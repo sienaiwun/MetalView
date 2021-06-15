@@ -12,6 +12,16 @@ public var Z_AXIS: FLOAT3{
     return FLOAT3(0,0,1)
 }
 
+extension Float
+{
+    var toRadians: Float{
+           return (self / 180.0) * Float.pi
+       }
+       
+       var toDegrees: Float{
+           return self * (180.0 / Float.pi)
+       }
+}
 extension matrix_float4x4{
     
     mutating func translate(direction: FLOAT3){
@@ -91,21 +101,24 @@ extension matrix_float4x4{
         self = matrix_multiply(self, result)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    static func perspective(degreesFov: Float, aspectRatio: Float, near: Float, far: Float)->matrix_float4x4{
+            let fov = degreesFov.toRadians
+            
+            let t: Float = tan(fov / 2)
+            
+            let x: Float = 1 / (aspectRatio * t)
+            let y: Float = 1 / t
+            let z: Float = -((far + near) / (far - near))
+            let w: Float = -((2 * far * near) / (far - near))
+            
+            var result = matrix_identity_float4x4
+            result.columns = (
+                FLOAT4(x,  0,  0,   0),
+                FLOAT4(0,  y,  0,   0),
+                FLOAT4(0,  0,  z,  -1),
+                FLOAT4(0,  0,  w,   0)
+            )
+            return result
+        }
     
 }

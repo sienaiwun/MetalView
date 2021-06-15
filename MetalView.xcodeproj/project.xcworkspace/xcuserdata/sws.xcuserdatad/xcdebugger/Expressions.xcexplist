@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GameObject.doRender(_:):GameObject.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ModelConstants.stride()">
+            </PersistentString>
+            <PersistentString
+               value = "ModelConstants">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Scene.render(_:):Scene.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SceneConstants.stride()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
