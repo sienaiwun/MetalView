@@ -78,8 +78,8 @@
             filePath = "EngineFile/Scene/GameObject/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "doUpdate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "EngineFile/Scene/GameObject/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "render(_:)"
             landmarkType = "7">
          </BreakpointContent>

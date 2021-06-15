@@ -1,7 +1,6 @@
 import MetalKit
 
-
-class Scene:Node
+class BoxScene:Node
 {
     private var _camera:Camera = Camera()
  
@@ -13,13 +12,7 @@ class Scene:Node
         buildScene()
     }
     
-    func buildScene() {
-        let singleObject:GameObject = GameObject(meshType: .Box, texture: TextureLibrary.Descriptor(.RT))
-        addChild(singleObject)
-        _camera.setPositionZ(5)
-        addChild(_camera)
-        
-    }
+   
     
     override func doUpdate() {
         _sceneConstant.viewMatrix = _camera.viewMatrix
@@ -32,5 +25,16 @@ class Scene:Node
         renderCommandEncoder.setVertexBytes(&_sceneConstant, length: SceneConstants.stride(), index: 2)
         super.render(renderCommandEncoder)
         renderCommandEncoder.popDebugGroup()
+    }
+}
+
+extension BoxScene:Scene
+{
+    func buildScene() {
+        let singleObject:GameObject = GameObject(meshType: .Box, texture: TextureLibrary.Descriptor(.RT))
+        addChild(singleObject)
+        _camera.setPositionZ(5)
+        addChild(_camera)
+        
     }
 }
