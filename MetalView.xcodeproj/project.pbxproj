@@ -13,6 +13,37 @@
 		9806932C266A4D2D0012A983 /* MeshLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806932B266A4D2D0012A983 /* MeshLibrary.swift */; };
 		98069330266A592A0012A983 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806932F266A592A0012A983 /* GameObject.swift */; };
 		98069338266DCC540012A983 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98069337266DCC540012A983 /* Matrix.swift */; };
+		9809FAC2268D745E001EB201 /* ComputeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BF267392EC007BAA90 /* ComputeShader.metal */; };
+		9809FAC3268D745E001EB201 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66A2665025A0030D568 /* MetalView.swift */; };
+		9809FAC4268D745E001EB201 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69E2667BD090030D568 /* Defines.swift */; };
+		9809FAC5268D745E001EB201 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98069337266DCC540012A983 /* Matrix.swift */; };
+		9809FAC6268D745E001EB201 /* VertexDescriptionLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A698266660780030D568 /* VertexDescriptionLibrary.swift */; };
+		9809FAC7268D745E001EB201 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806932426690F000012A983 /* Renderable.swift */; };
+		9809FAC8268D745E001EB201 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A68C266628DA0030D568 /* Engine.swift */; };
+		9809FACA268D745E001EB201 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980693182668FCB00012A983 /* Renderer.swift */; };
+		9809FACB268D745E001EB201 /* SamplerLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29272671F39600701E0F /* SamplerLibrary.swift */; };
+		9809FACC268D745E001EB201 /* ComputeRenderPipelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969B926735F05007BAA90 /* ComputeRenderPipelineState.swift */; };
+		9809FACD268D745E001EB201 /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29242671F37D00701E0F /* TextureLibrary.swift */; };
+		9809FACE268D745E001EB201 /* MeshLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806932B266A4D2D0012A983 /* MeshLibrary.swift */; };
+		9809FACF268D745E001EB201 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806932F266A592A0012A983 /* GameObject.swift */; };
+		9809FAD0268D745E001EB201 /* DepthStencilStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969C22674941C007BAA90 /* DepthStencilStateLibrary.swift */; };
+		9809FAD1268D745E001EB201 /* Computable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BC26738EEB007BAA90 /* Computable.swift */; };
+		9809FAD2268D745E001EB201 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A695266639A80030D568 /* Types.swift */; };
+		9809FAD3268D745E001EB201 /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A6A12667BE2A0030D568 /* RenderPipelineStateLibrary.swift */; };
+		9809FAD4268D745E001EB201 /* RenderPipelineDescriptorLibary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69B2667B9920030D568 /* RenderPipelineDescriptorLibary.swift */; };
+		9809FAD5268D745E001EB201 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980693282669110A0012A983 /* Node.swift */; };
+		9809FAD6268D745E001EB201 /* MetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66F266607990030D568 /* MetalShader.metal */; };
+		9809FAD7268D745E001EB201 /* BoxScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DD5FE12678D0BB009F268E /* BoxScene.swift */; };
+		9809FAD8268D745E001EB201 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E969C52675E5FC007BAA90 /* Camera.swift */; };
+		9809FAD9268D745E001EB201 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69226662BD30030D568 /* ShaderLibrary.swift */; };
+		9809FADC268D745E001EB201 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DD5FDD2678CF32009F268E /* Scene.swift */; };
+		9809FAE0268D745E001EB201 /* high_res.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 982D292E26720ADD00701E0F /* high_res.jpeg */; };
+		9809FAE1268D745E001EB201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D5A640266502420030D568 /* Assets.xcassets */; };
+		9809FAE3268D745E001EB201 /* rename.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 982D292B2671F5C000701E0F /* rename.jpeg */; };
+		9809FAF9268D758A001EB201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9809FAF7268D758A001EB201 /* ViewController.swift */; };
+		9809FAFD268D8B89001EB201 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9809FAFC268D8B89001EB201 /* Info.plist */; };
+		9809FB09268D8C42001EB201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9809FAF2268D7547001EB201 /* AppDelegate.swift */; };
+		9809FB13268D8E0B001EB201 /* Mac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9809FB12268D8E0B001EB201 /* Mac.storyboard */; };
 		982D29252671F37D00701E0F /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29242671F37D00701E0F /* TextureLibrary.swift */; };
 		982D29282671F39600701E0F /* SamplerLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29272671F39600701E0F /* SamplerLibrary.swift */; };
 		982D292C2671F5C000701E0F /* rename.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 982D292B2671F5C000701E0F /* rename.jpeg */; };
@@ -48,11 +79,16 @@
 		9806932B266A4D2D0012A983 /* MeshLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshLibrary.swift; sourceTree = "<group>"; };
 		9806932F266A592A0012A983 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		98069337266DCC540012A983 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		9809FAE7268D745E001EB201 /* MetalViewMAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalViewMAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9809FAF2268D7547001EB201 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9809FAF7268D758A001EB201 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9809FAFC268D8B89001EB201 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9809FB12268D8E0B001EB201 /* Mac.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mac.storyboard; sourceTree = "<group>"; };
 		982D29242671F37D00701E0F /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
 		982D29272671F39600701E0F /* SamplerLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerLibrary.swift; sourceTree = "<group>"; };
 		982D292B2671F5C000701E0F /* rename.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rename.jpeg; sourceTree = "<group>"; };
 		982D292E26720ADD00701E0F /* high_res.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = high_res.jpeg; sourceTree = "<group>"; };
-		98D5A634266502410030D568 /* MetalView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D5A634266502410030D568 /* MetalViewIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalViewIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D5A637266502410030D568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D5A639266502410030D568 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		98D5A63B266502410030D568 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9809FADD268D745E001EB201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98D5A631266502410030D568 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +182,17 @@
 			path = IOS;
 			sourceTree = "<group>";
 		};
+		9809FAF1268D74D3001EB201 /* MAC */ = {
+			isa = PBXGroup;
+			children = (
+				9809FB12268D8E0B001EB201 /* Mac.storyboard */,
+				9809FAFC268D8B89001EB201 /* Info.plist */,
+				9809FAF7268D758A001EB201 /* ViewController.swift */,
+				9809FAF2268D7547001EB201 /* AppDelegate.swift */,
+			);
+			path = MAC;
+			sourceTree = "<group>";
+		};
 		982D292A2671F42100701E0F /* Texture */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +205,7 @@
 		98D5A62B266502410030D568 = {
 			isa = PBXGroup;
 			children = (
+				9809FAF1268D74D3001EB201 /* MAC */,
 				9809FA8A268D7317001EB201 /* IOS */,
 				98069336266DCC3A0012A983 /* Math */,
 				98D5A68F26662B550030D568 /* Resources */,
@@ -164,7 +219,8 @@
 		98D5A635266502410030D568 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98D5A634266502410030D568 /* MetalView.app */,
+				98D5A634266502410030D568 /* MetalViewIOS.app */,
+				9809FAE7268D745E001EB201 /* MetalViewMAC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,9 +284,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		98D5A633266502410030D568 /* MetalView */ = {
+		9809FAC0268D745E001EB201 /* MetalViewMAC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98D5A65E266502420030D568 /* Build configuration list for PBXNativeTarget "MetalView" */;
+			buildConfigurationList = 9809FAE4268D745E001EB201 /* Build configuration list for PBXNativeTarget "MetalViewMAC" */;
+			buildPhases = (
+				9809FAC1268D745E001EB201 /* Sources */,
+				9809FADD268D745E001EB201 /* Frameworks */,
+				9809FADE268D745E001EB201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalViewMAC;
+			productName = MetalView;
+			productReference = 9809FAE7268D745E001EB201 /* MetalViewMAC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		98D5A633266502410030D568 /* MetalViewIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98D5A65E266502420030D568 /* Build configuration list for PBXNativeTarget "MetalViewIOS" */;
 			buildPhases = (
 				98D5A630266502410030D568 /* Sources */,
 				98D5A631266502410030D568 /* Frameworks */,
@@ -240,9 +313,9 @@
 			);
 			dependencies = (
 			);
-			name = MetalView;
+			name = MetalViewIOS;
 			productName = MetalView;
-			productReference = 98D5A634266502410030D568 /* MetalView.app */;
+			productReference = 98D5A634266502410030D568 /* MetalViewIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,12 +345,25 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				98D5A633266502410030D568 /* MetalView */,
+				98D5A633266502410030D568 /* MetalViewIOS */,
+				9809FAC0268D745E001EB201 /* MetalViewMAC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9809FADE268D745E001EB201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9809FAE0268D745E001EB201 /* high_res.jpeg in Resources */,
+				9809FB13268D8E0B001EB201 /* Mac.storyboard in Resources */,
+				9809FAE1268D745E001EB201 /* Assets.xcassets in Resources */,
+				9809FAE3268D745E001EB201 /* rename.jpeg in Resources */,
+				9809FAFD268D8B89001EB201 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98D5A632266502410030D568 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +379,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9809FAC1268D745E001EB201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9809FAF9268D758A001EB201 /* ViewController.swift in Sources */,
+				9809FAC2268D745E001EB201 /* ComputeShader.metal in Sources */,
+				9809FAC3268D745E001EB201 /* MetalView.swift in Sources */,
+				9809FAC4268D745E001EB201 /* Defines.swift in Sources */,
+				9809FAC5268D745E001EB201 /* Matrix.swift in Sources */,
+				9809FAC6268D745E001EB201 /* VertexDescriptionLibrary.swift in Sources */,
+				9809FAC7268D745E001EB201 /* Renderable.swift in Sources */,
+				9809FAC8268D745E001EB201 /* Engine.swift in Sources */,
+				9809FB09268D8C42001EB201 /* AppDelegate.swift in Sources */,
+				9809FACA268D745E001EB201 /* Renderer.swift in Sources */,
+				9809FACB268D745E001EB201 /* SamplerLibrary.swift in Sources */,
+				9809FACC268D745E001EB201 /* ComputeRenderPipelineState.swift in Sources */,
+				9809FACD268D745E001EB201 /* TextureLibrary.swift in Sources */,
+				9809FACE268D745E001EB201 /* MeshLibrary.swift in Sources */,
+				9809FACF268D745E001EB201 /* GameObject.swift in Sources */,
+				9809FAD0268D745E001EB201 /* DepthStencilStateLibrary.swift in Sources */,
+				9809FAD1268D745E001EB201 /* Computable.swift in Sources */,
+				9809FAD2268D745E001EB201 /* Types.swift in Sources */,
+				9809FAD3268D745E001EB201 /* RenderPipelineStateLibrary.swift in Sources */,
+				9809FAD4268D745E001EB201 /* RenderPipelineDescriptorLibary.swift in Sources */,
+				9809FAD5268D745E001EB201 /* Node.swift in Sources */,
+				9809FAD6268D745E001EB201 /* MetalShader.metal in Sources */,
+				9809FAD7268D745E001EB201 /* BoxScene.swift in Sources */,
+				9809FAD8268D745E001EB201 /* Camera.swift in Sources */,
+				9809FAD9268D745E001EB201 /* ShaderLibrary.swift in Sources */,
+				9809FADC268D745E001EB201 /* Scene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98D5A630266502410030D568 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +468,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9809FAE5268D745E001EB201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X65U9UG4TG;
+				INFOPLIST_FILE = MAC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9809FAE6268D745E001EB201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X65U9UG4TG;
+				INFOPLIST_FILE = MAC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MetalView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		98D5A65C266502420030D568 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,6 +671,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9809FAE4268D745E001EB201 /* Build configuration list for PBXNativeTarget "MetalViewMAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9809FAE5268D745E001EB201 /* Debug */,
+				9809FAE6268D745E001EB201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		98D5A62F266502410030D568 /* Build configuration list for PBXProject "MetalView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -517,7 +689,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98D5A65E266502420030D568 /* Build configuration list for PBXNativeTarget "MetalView" */ = {
+		98D5A65E266502420030D568 /* Build configuration list for PBXNativeTarget "MetalViewIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98D5A65F266502420030D568 /* Debug */,

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "98D5A633266502410030D568"
-               BuildableName = "MetalView.app"
-               BlueprintName = "MetalView"
+               BlueprintIdentifier = "9809FAC0268D745E001EB201"
+               BuildableName = "MetalViewMAC.app"
+               BlueprintName = "MetalViewMAC"
                ReferencedContainer = "container:MetalView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "98D5A649266502420030D568"
-               BuildableName = "MetalViewTests.xctest"
-               BlueprintName = "MetalViewTests"
-               ReferencedContainer = "container:MetalView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "98D5A654266502420030D568"
-               BuildableName = "MetalViewUITests.xctest"
-               BlueprintName = "MetalViewUITests"
-               ReferencedContainer = "container:MetalView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -64,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "98D5A633266502410030D568"
-            BuildableName = "MetalView.app"
-            BlueprintName = "MetalView"
+            BlueprintIdentifier = "9809FAC0268D745E001EB201"
+            BuildableName = "MetalViewMAC.app"
+            BlueprintName = "MetalViewMAC"
             ReferencedContainer = "container:MetalView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "98D5A633266502410030D568"
-            BuildableName = "MetalView.app"
-            BlueprintName = "MetalView"
+            BlueprintIdentifier = "9809FAC0268D745E001EB201"
+            BuildableName = "MetalViewMAC.app"
+            BlueprintName = "MetalViewMAC"
             ReferencedContainer = "container:MetalView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
