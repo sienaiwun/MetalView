@@ -126,6 +126,19 @@
 			path = Math;
 			sourceTree = "<group>";
 		};
+		9809FA8A268D7317001EB201 /* IOS */ = {
+			isa = PBXGroup;
+			children = (
+				98D5A637266502410030D568 /* AppDelegate.swift */,
+				98D5A639266502410030D568 /* SceneDelegate.swift */,
+				98D5A63B266502410030D568 /* ViewController.swift */,
+				98D5A642266502420030D568 /* LaunchScreen.storyboard */,
+				98D5A63D266502410030D568 /* Main.storyboard */,
+				98D5A645266502420030D568 /* Info.plist */,
+			);
+			path = IOS;
+			sourceTree = "<group>";
+		};
 		982D292A2671F42100701E0F /* Texture */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +151,11 @@
 		98D5A62B266502410030D568 = {
 			isa = PBXGroup;
 			children = (
+				9809FA8A268D7317001EB201 /* IOS */,
 				98069336266DCC3A0012A983 /* Math */,
 				98D5A68F26662B550030D568 /* Resources */,
 				98D5A68B2666275F0030D568 /* Library */,
 				98D5A68A266627450030D568 /* EngineFile */,
-				98D5A67D26661AB90030D568 /* WindowFile */,
 				98D5A636266502410030D568 /* MetalView */,
 				98D5A635266502410030D568 /* Products */,
 			);
@@ -159,23 +172,9 @@
 		98D5A636266502410030D568 /* MetalView */ = {
 			isa = PBXGroup;
 			children = (
-				98D5A63D266502410030D568 /* Main.storyboard */,
 				98D5A66A2665025A0030D568 /* MetalView.swift */,
 			);
 			path = MetalView;
-			sourceTree = "<group>";
-		};
-		98D5A67D26661AB90030D568 /* WindowFile */ = {
-			isa = PBXGroup;
-			children = (
-				98D5A637266502410030D568 /* AppDelegate.swift */,
-				98D5A639266502410030D568 /* SceneDelegate.swift */,
-				98D5A63B266502410030D568 /* ViewController.swift */,
-				98D5A640266502420030D568 /* Assets.xcassets */,
-				98D5A642266502420030D568 /* LaunchScreen.storyboard */,
-				98D5A645266502420030D568 /* Info.plist */,
-			);
-			path = WindowFile;
 			sourceTree = "<group>";
 		};
 		98D5A68A266627450030D568 /* EngineFile */ = {
@@ -210,6 +209,7 @@
 		98D5A68F26662B550030D568 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				98D5A640266502420030D568 /* Assets.xcassets */,
 				982D292A2671F42100701E0F /* Texture */,
 				98D5A69026662B5F0030D568 /* Shaders */,
 			);
@@ -472,7 +472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X65U9UG4TG;
-				INFOPLIST_FILE = WindowFile/Info.plist;
+				INFOPLIST_FILE = IOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,7 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X65U9UG4TG;
-				INFOPLIST_FILE = WindowFile/Info.plist;
+				INFOPLIST_FILE = IOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
