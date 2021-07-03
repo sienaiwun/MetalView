@@ -48,6 +48,12 @@
 		982D29282671F39600701E0F /* SamplerLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29272671F39600701E0F /* SamplerLibrary.swift */; };
 		982D292C2671F5C000701E0F /* rename.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 982D292B2671F5C000701E0F /* rename.jpeg */; };
 		982D292F26720ADD00701E0F /* high_res.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 982D292E26720ADD00701E0F /* high_res.jpeg */; };
+		9845F112269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
+		9845F113269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
+		9845F114269015ED0035B683 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9845F110269015ED0035B683 /* cruiser.obj */; };
+		9845F115269015ED0035B683 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9845F110269015ED0035B683 /* cruiser.obj */; };
+		9845F116269015ED0035B683 /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 9845F111269015ED0035B683 /* cruiser.bmp */; };
+		9845F117269015ED0035B683 /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 9845F111269015ED0035B683 /* cruiser.bmp */; };
 		98D5A638266502410030D568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A637266502410030D568 /* AppDelegate.swift */; };
 		98D5A63A266502410030D568 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A639266502410030D568 /* SceneDelegate.swift */; };
 		98D5A63C266502410030D568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A63B266502410030D568 /* ViewController.swift */; };
@@ -88,6 +94,9 @@
 		982D29272671F39600701E0F /* SamplerLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerLibrary.swift; sourceTree = "<group>"; };
 		982D292B2671F5C000701E0F /* rename.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rename.jpeg; sourceTree = "<group>"; };
 		982D292E26720ADD00701E0F /* high_res.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = high_res.jpeg; sourceTree = "<group>"; };
+		9845F10F269015ED0035B683 /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
+		9845F110269015ED0035B683 /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
+		9845F111269015ED0035B683 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
 		98D5A634266502410030D568 /* MetalViewIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalViewIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D5A637266502410030D568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D5A639266502410030D568 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +211,24 @@
 			path = Texture;
 			sourceTree = "<group>";
 		};
+		9845F10D269015C60035B683 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9845F10E269015CE0035B683 /* cruiser */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9845F10E269015CE0035B683 /* cruiser */ = {
+			isa = PBXGroup;
+			children = (
+				9845F111269015ED0035B683 /* cruiser.bmp */,
+				9845F10F269015ED0035B683 /* cruiser.mtl */,
+				9845F110269015ED0035B683 /* cruiser.obj */,
+			);
+			path = cruiser;
+			sourceTree = "<group>";
+		};
 		98D5A62B266502410030D568 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +292,7 @@
 		98D5A68F26662B550030D568 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9845F10D269015C60035B683 /* Model */,
 				98D5A640266502420030D568 /* Assets.xcassets */,
 				982D292A2671F42100701E0F /* Texture */,
 				98D5A69026662B5F0030D568 /* Shaders */,
@@ -359,8 +387,11 @@
 				9809FAE0268D745E001EB201 /* high_res.jpeg in Resources */,
 				9809FB13268D8E0B001EB201 /* Mac.storyboard in Resources */,
 				9809FAE1268D745E001EB201 /* Assets.xcassets in Resources */,
+				9845F115269015ED0035B683 /* cruiser.obj in Resources */,
 				9809FAE3268D745E001EB201 /* rename.jpeg in Resources */,
+				9845F117269015ED0035B683 /* cruiser.bmp in Resources */,
 				9809FAFD268D8B89001EB201 /* Info.plist in Resources */,
+				9845F113269015ED0035B683 /* cruiser.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,8 +402,11 @@
 				98D5A644266502420030D568 /* LaunchScreen.storyboard in Resources */,
 				982D292F26720ADD00701E0F /* high_res.jpeg in Resources */,
 				98D5A641266502420030D568 /* Assets.xcassets in Resources */,
+				9845F114269015ED0035B683 /* cruiser.obj in Resources */,
 				98D5A63F266502410030D568 /* Main.storyboard in Resources */,
+				9845F116269015ED0035B683 /* cruiser.bmp in Resources */,
 				982D292C2671F5C000701E0F /* rename.jpeg in Resources */,
+				9845F112269015ED0035B683 /* cruiser.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

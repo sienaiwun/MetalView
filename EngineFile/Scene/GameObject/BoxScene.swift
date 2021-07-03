@@ -31,7 +31,7 @@ class BoxScene:Node
 extension BoxScene:Scene
 {
     func buildScene() {
-        let singleObject:GameObject = GameObject(meshType: .Rectangle, texture: TextureLibrary.Descriptor(.RT))
+        let singleObject:GameObject = GameObject(meshType: .Cruiser, texture: TextureLibrary.Descriptor(.RT))
         addChild(singleObject)
         _camera.setPositionZ(5)
         addChild(_camera)
