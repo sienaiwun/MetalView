@@ -12,8 +12,12 @@ class TextureLibrary{
     {
         library.updateValue(AssetTexture("rename", ext: "jpeg"), forKey: .Basic)
         library.updateValue(AssetTexture("high_res", ext: "jpeg"), forKey: .HighRes)
+        #if MAC
+        library.updateValue(RTTexture(textureSizeX:4096,textureSizeY:4096, pixelFormat:.rgba8Unorm), forKey: .RT)
+        #else
         library.updateValue(RTTexture(textureSizeX:4096,textureSizeY:4096), forKey: .RT)
-    }
+        #endif
+        }
     public static func initialize(){
         initValues()
     }

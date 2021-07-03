@@ -482,6 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_SWIFT_FLAGS = "-DMAC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MetalView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -504,6 +505,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_SWIFT_FLAGS = "-DMAC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MetalView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
