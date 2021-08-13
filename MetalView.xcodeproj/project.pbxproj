@@ -60,6 +60,8 @@
 		982ED77526C65BE300F828D4 /* LightModel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77226C65BE300F828D4 /* LightModel.metal */; };
 		982ED77626C65BE300F828D4 /* DataTypes.metal in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77326C65BE300F828D4 /* DataTypes.metal */; };
 		982ED77726C65BE300F828D4 /* DataTypes.metal in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77326C65BE300F828D4 /* DataTypes.metal */; };
+		982ED77B26C6646B00F828D4 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77A26C6646B00F828D4 /* Lighting.swift */; };
+		982ED77C26C6646B00F828D4 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77A26C6646B00F828D4 /* Lighting.swift */; };
 		9845F112269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
 		9845F113269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
 		9845F114269015ED0035B683 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9845F110269015ED0035B683 /* cruiser.obj */; };
@@ -112,6 +114,7 @@
 		982D292E26720ADD00701E0F /* high_res.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = high_res.jpeg; sourceTree = "<group>"; };
 		982ED77226C65BE300F828D4 /* LightModel.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = LightModel.metal; sourceTree = "<group>"; };
 		982ED77326C65BE300F828D4 /* DataTypes.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DataTypes.metal; sourceTree = "<group>"; };
+		982ED77A26C6646B00F828D4 /* Lighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lighting.swift; sourceTree = "<group>"; };
 		9845F10F269015ED0035B683 /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
 		9845F110269015ED0035B683 /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
 		9845F111269015ED0035B683 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				98DD5FE12678D0BB009F268E /* BoxScene.swift */,
 				9806932F266A592A0012A983 /* GameObject.swift */,
 				98E969C52675E5FC007BAA90 /* Camera.swift */,
+				982ED77A26C6646B00F828D4 /* Lighting.swift */,
 			);
 			path = GameObject;
 			sourceTree = "<group>";
@@ -482,6 +486,7 @@
 				9809FAD5268D745E001EB201 /* Node.swift in Sources */,
 				9809FAD6268D745E001EB201 /* MetalShader.metal in Sources */,
 				9809FAD7268D745E001EB201 /* BoxScene.swift in Sources */,
+				982ED77C26C6646B00F828D4 /* Lighting.swift in Sources */,
 				9809FAD8268D745E001EB201 /* Camera.swift in Sources */,
 				9809FAD9268D745E001EB201 /* ShaderLibrary.swift in Sources */,
 				9809FADC268D745E001EB201 /* Scene.swift in Sources */,
@@ -503,6 +508,7 @@
 				98D5A63C266502410030D568 /* ViewController.swift in Sources */,
 				980693192668FCB00012A983 /* Renderer.swift in Sources */,
 				982D29282671F39600701E0F /* SamplerLibrary.swift in Sources */,
+				982ED77B26C6646B00F828D4 /* Lighting.swift in Sources */,
 				98E969BA26735F05007BAA90 /* ComputeRenderPipelineState.swift in Sources */,
 				982D29252671F37D00701E0F /* TextureLibrary.swift in Sources */,
 				9806932C266A4D2D0012A983 /* MeshLibrary.swift in Sources */,

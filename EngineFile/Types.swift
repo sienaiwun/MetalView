@@ -19,6 +19,7 @@ extension FLOAT2: datasize { }
 extension FLOAT3: datasize { }
 extension FLOAT4: datasize { }
 extension UInt32: datasize { }
+extension Int32: datasize { }
 
 struct Vertex: datasize{
     var position: FLOAT3
@@ -58,4 +59,14 @@ struct Material: datasize{
     var diffuse: FLOAT3 = FLOAT3(1,1,1)
     var specular: FLOAT3 = FLOAT3(1,1,1)
     var shininess: Float = 2
+}
+
+struct LightData:datasize{
+    var position:FLOAT3 =  FLOAT3(0,0,0)
+    var color:FLOAT3 = FLOAT3(1,1,1)
+    var brightness:Float = 1.0
+    
+    var ambientIntensity:Float = 1.0
+    var diffuseIntensity:Float = 1.0
+    var specularIntensity:Float = 1.0
 }

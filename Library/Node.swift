@@ -3,6 +3,7 @@ import MetalKit
 public class Node{
     
     private var _name:String = "basic node"
+    private var _id: String!
     
     private var _position:FLOAT3 = FLOAT3(0,0,0)
     
@@ -14,11 +15,15 @@ public class Node{
     
     var parentModelMatrix = matrix_identity_float4x4
     
+    init(name: String = ""){
+        self._name = name
+        self._id = UUID().uuidString
+    }
+    
     var modelMatrix :matrix_float4x4
     {
         return _modelMatrix;
     }
-    
     
     func updateModelMatrix()
     {
