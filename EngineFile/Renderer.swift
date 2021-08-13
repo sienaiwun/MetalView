@@ -2,7 +2,7 @@ import MetalKit
 
 class Renderer:NSObject, MTKViewDelegate{
     //var triangle:Triangle = Triangle()
-    var currentScene:BoxScene = BoxScene(name:"Computer Example")
+    var currentScene:ObjectScene = ObjectScene(name:"Computer Example")
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         

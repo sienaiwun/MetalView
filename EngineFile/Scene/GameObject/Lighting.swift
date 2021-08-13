@@ -30,6 +30,14 @@ class LightObject:Node
     public func getLightSpecularIntensity()->Float { return self.lightData.specularIntensity }
 }
 
+class Sun: LightObject {
+    init() {
+        super.init(name: "Sun")
+        self.setPositionY(10)
+    }
+}
+
+
 class Lighting{
     private var _lightObjects:[LightObject] =  []
     
