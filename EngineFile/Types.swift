@@ -18,6 +18,7 @@ extension datasize{
 extension FLOAT2: datasize { }
 extension FLOAT3: datasize { }
 extension FLOAT4: datasize { }
+extension UInt32: datasize { }
 
 struct Vertex: datasize{
     var position: FLOAT3
@@ -46,4 +47,14 @@ struct BufferConstants:datasize
     var mEpsilon:Float = 0.0
     var time:Float = 0.0
     var _tap2:Float = 0.0
+}
+
+struct Material: datasize{
+    var color = FLOAT4(0.6, 0.6, 0.6, 1.0)
+    var isLit: Bool = true
+    
+    var ambient: FLOAT3 = FLOAT3(0.1, 0.1, 0.1)
+    var diffuse: FLOAT3 = FLOAT3(1,1,1)
+    var specular: FLOAT3 = FLOAT3(1,1,1)
+    var shininess: Float = 2
 }

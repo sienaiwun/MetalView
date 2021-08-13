@@ -11,7 +11,7 @@ public class GameObject:Node
     var s_time:Float = 0
    
     init(meshType: MeshTypes, texture : MTLTexture) {
-        mesh = MeshLibrary.Mesh(meshType)
+        mesh = MeshLibrary.Descriptor(meshType)
         self.color_texture = texture
     }
     

@@ -1,5 +1,6 @@
 import MetalKit
 enum TextureType{
+    case None
     case Basic
     case HighRes
     case RT
