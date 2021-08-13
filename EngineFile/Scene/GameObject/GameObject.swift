@@ -9,7 +9,7 @@ public class GameObject:Node
     
     var s_time:Float = 0
    
-    init(meshType: MeshTypes, texture : MTLTexture) {
+    init(meshType: MeshTypes) {
         mesh = MeshLibrary.Descriptor(meshType)
     }
     

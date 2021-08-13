@@ -6,10 +6,14 @@ class ObjectScene:Scene
 {
     override func buildScene()
     {
-        let singleObject:GameObject = GameObject(meshType: .Chest, texture: TextureLibrary.Descriptor(.RT))
+        let singleObject:GameObject = GameObject(meshType: .Chest)
         singleObject.setScale(0.01)
         addChild(singleObject)
-        _camera.setPositionZ(5)
+        let planeObject:GameObject = GameObject(meshType: .Rectangle)
+        planeObject.setRotationX(Float(Double.pi/2))
+        planeObject.setPositionY(-0.1)
+        addChild(planeObject)
+        _camera.setPosition(0,0.5,5)
         addChild(_camera)
         addLight(Sun())
     }
