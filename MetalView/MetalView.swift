@@ -14,5 +14,6 @@ class MetalView: MTKView {
         self.delegate = render
     }
     
- 
+    internal var _touches:[UITouch:Touch] = [:]
+
 }

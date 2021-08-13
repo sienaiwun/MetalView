@@ -21,5 +21,21 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "MetalView.touchesBegan(_:with:):TouchController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_touches">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MetalView.touchesEnded(_:with:):TouchController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_touches">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

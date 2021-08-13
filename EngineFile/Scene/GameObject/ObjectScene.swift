@@ -1,7 +1,5 @@
 import MetalKit
 
-
-
 class ObjectScene:Scene
 {
     override func buildScene()

@@ -62,6 +62,7 @@
 		982ED77726C65BE300F828D4 /* DataTypes.metal in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77326C65BE300F828D4 /* DataTypes.metal */; };
 		982ED77B26C6646B00F828D4 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77A26C6646B00F828D4 /* Lighting.swift */; };
 		982ED77C26C6646B00F828D4 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77A26C6646B00F828D4 /* Lighting.swift */; };
+		982ED78226C6953900F828D4 /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED78126C6953900F828D4 /* TouchController.swift */; };
 		9845F112269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
 		9845F113269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
 		9845F114269015ED0035B683 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9845F110269015ED0035B683 /* cruiser.obj */; };
@@ -115,6 +116,7 @@
 		982ED77226C65BE300F828D4 /* LightModel.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = LightModel.metal; sourceTree = "<group>"; };
 		982ED77326C65BE300F828D4 /* DataTypes.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DataTypes.metal; sourceTree = "<group>"; };
 		982ED77A26C6646B00F828D4 /* Lighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lighting.swift; sourceTree = "<group>"; };
+		982ED78126C6953900F828D4 /* TouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		9845F10F269015ED0035B683 /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
 		9845F110269015ED0035B683 /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
 		9845F111269015ED0035B683 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				98D5A66A2665025A0030D568 /* MetalView.swift */,
+				982ED78126C6953900F828D4 /* TouchController.swift */,
 			);
 			path = MetalView;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				98D5A66B2665025A0030D568 /* MetalView.swift in Sources */,
 				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
 				98069338266DCC540012A983 /* Matrix.swift in Sources */,
+				982ED78226C6953900F828D4 /* TouchController.swift in Sources */,
 				98D5A699266660780030D568 /* VertexDescriptionLibrary.swift in Sources */,
 				9806932526690F000012A983 /* Renderable.swift in Sources */,
 				982ED77426C65BE300F828D4 /* LightModel.metal in Sources */,
