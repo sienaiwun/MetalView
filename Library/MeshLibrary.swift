@@ -195,8 +195,9 @@ class Mesh {
     
     func addVertex(position: FLOAT3,
                      color: FLOAT4 = FLOAT4(1,0,1,1),
-                     texCoord: FLOAT2 = FLOAT2(0,0)) {
-        _vertices.append(Vertex(position: position, color: color, texCoord: texCoord))
+                     texCoord: FLOAT2 = FLOAT2(0,0),
+                     normal:FLOAT3 = FLOAT3(0,1,0)) {
+        _vertices.append(Vertex(position: position, color: color, texCoord: texCoord, normal: normal))
       }
     
 }
@@ -243,6 +244,8 @@ class Rectangle: Mesh{
             addVertex(position: FLOAT3( half_size, half_size,0), color: FLOAT4(1,0,0,1), texCoord:FLOAT2(1,0)) //Top Right
             addVertex(position: FLOAT3(-half_size,-half_size,0), color: FLOAT4(0,0,1,1), texCoord:FLOAT2(0,1)) //Bottom Left
             addVertex(position: FLOAT3( half_size,-half_size,0), color: FLOAT4(1,0,1,1), texCoord:FLOAT2(1,1))  //Bottom Right
+            
+            addSubmesh(Submesh(indices: [0,1,2,0,2,3]))
         }
     }
 }

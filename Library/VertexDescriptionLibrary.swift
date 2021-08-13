@@ -44,6 +44,10 @@ public struct Basic_VertexDescriptor:VertexDescription{
         vertexDescriptor.attributes[2].format = .float2
         vertexDescriptor.attributes[2].bufferIndex = 0
         vertexDescriptor.attributes[2].offset = FLOAT3.size() + FLOAT4.size()
+        
+        vertexDescriptor.attributes[3].format = .float3
+        vertexDescriptor.attributes[3].bufferIndex = 0
+        vertexDescriptor.attributes[3].offset = FLOAT3.size() + FLOAT4.size() + FLOAT3.size()
       
          vertexDescriptor.layouts[0].stride = Vertex.stride()
          return vertexDescriptor

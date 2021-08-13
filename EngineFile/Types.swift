@@ -24,6 +24,7 @@ struct Vertex: datasize{
     var position: FLOAT3
     var color: FLOAT4
     var texCoord: FLOAT2
+    var normal: FLOAT3
 }
 
 struct ModelConstants:datasize {
