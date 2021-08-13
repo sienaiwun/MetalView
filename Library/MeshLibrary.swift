@@ -5,6 +5,7 @@ enum MeshTypes {
     case Rectangle
     case Box
     case Cruiser
+    case Chest
 }
 class Submesh
 {
@@ -215,6 +216,7 @@ class MeshLibrary {
         meshes.updateValue(Rectangle(), forKey: .Rectangle)
         meshes.updateValue(Box(), forKey: .Box)
         meshes.updateValue(Mesh(modelName: "cruiser"), forKey: .Cruiser)
+        meshes.updateValue(Mesh(modelName: "chest"), forKey: .Chest)
     }
     
     public static func Descriptor(_ meshType: MeshTypes)->Mesh{

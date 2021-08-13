@@ -22,7 +22,11 @@ public class Node{
     
     var modelMatrix :matrix_float4x4
     {
-        return _modelMatrix;
+        updateModelMatrix();
+        _position = FLOAT3(0,0,0)
+        _scale = FLOAT3(1,1,1)
+        _rotation = FLOAT3(0,0,0)
+        return matrix_multiply(parentModelMatrix, _modelMatrix);
     }
     
     func updateModelMatrix()
@@ -96,7 +100,6 @@ extension Node {
     
     func setPosition(_ position: FLOAT3){
            self._position = position
-           updateModelMatrix()
        }
     func setPosition(_ x: Float,_ y: Float,_ z: Float) { setPosition(FLOAT3(x,y,z)) }
         func setPositionX(_ xPosition: Float) { setPosition(xPosition, getPositionY(), getPositionZ()) }
@@ -110,10 +113,24 @@ extension Node {
     
     func setRotation(_ rotation: FLOAT3) {
             self._rotation = rotation
-            updateModelMatrix()
         }
         func setRotation(_ x: Float,_ y: Float,_ z: Float) { setRotation(FLOAT3(x,y,z)) }
         func setRotationX(_ xRotation: Float) { setRotation(xRotation, getRotationY(), getRotationZ()) }
         func setRotationY(_ yRotation: Float) { setRotation(getRotationX(), yRotation, getRotationZ()) }
         func setRotationZ(_ zRotation: Float) { setRotation(getRotationX(), getRotationY(), zRotation) }
+    
+    
+    func setScale(_ scale: FLOAT3){ self._scale = scale }
+    func setScale(_ r: Float,_ g: Float,_ b: Float) { setScale(FLOAT3(r,g,b)) }
+    func setScale(_ scale: Float){setScale(FLOAT3(scale, scale, scale))}
+    func setScaleX(_ scaleX: Float){ self._scale.x = scaleX }
+    func setScaleY(_ scaleY: Float){ self._scale.y = scaleY }
+    func setScaleZ(_ scaleZ: Float){ self._scale.z = scaleZ }
+    func getScale()->FLOAT3 { return self._scale }
+    func getScaleX()->Float { return self._scale.x }
+    func getScaleY()->Float { return self._scale.y }
+    func getScaleZ()->Float { return self._scale.z }
+    func scaleX(_ delta: Float){ self._scale.x += delta }
+    func scaleY(_ delta: Float){ self._scale.y += delta }
+    func scaleZ(_ delta: Float){ self._scale.z += delta }
 }
