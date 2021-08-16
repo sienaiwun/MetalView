@@ -5,13 +5,13 @@ class MetalView: MTKView {
     
     required init(coder:NSCoder){
         super.init(coder:coder)
-        device = MTLCreateSystemDefaultDevice()
+        /*device = MTLCreateSystemDefaultDevice()
         Engine.Ignite(device: device!)
         clearColor = Defines.clearColor
         colorPixelFormat = Defines.bgPixelFormat
         depthStencilPixelFormat = Defines.bgDepthPixelFormatl
         render = Renderer()
-        self.delegate = render
+        self.delegate = render*/
     }
     
     

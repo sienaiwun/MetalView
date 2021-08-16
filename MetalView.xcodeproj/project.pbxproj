@@ -14,7 +14,6 @@
 		98069330266A592A0012A983 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806932F266A592A0012A983 /* GameObject.swift */; };
 		98069338266DCC540012A983 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98069337266DCC540012A983 /* Matrix.swift */; };
 		9809FAC2268D745E001EB201 /* ComputeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98E969BF267392EC007BAA90 /* ComputeShader.metal */; };
-		9809FAC3268D745E001EB201 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66A2665025A0030D568 /* MetalView.swift */; };
 		9809FAC4268D745E001EB201 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69E2667BD090030D568 /* Defines.swift */; };
 		9809FAC5268D745E001EB201 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98069337266DCC540012A983 /* Matrix.swift */; };
 		9809FAC6268D745E001EB201 /* VertexDescriptionLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A698266660780030D568 /* VertexDescriptionLibrary.swift */; };
@@ -76,7 +75,6 @@
 		98D5A63F266502410030D568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D5A63D266502410030D568 /* Main.storyboard */; };
 		98D5A641266502420030D568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D5A640266502420030D568 /* Assets.xcassets */; };
 		98D5A644266502420030D568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D5A642266502420030D568 /* LaunchScreen.storyboard */; };
-		98D5A66B2665025A0030D568 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66A2665025A0030D568 /* MetalView.swift */; };
 		98D5A670266607990030D568 /* MetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A66F266607990030D568 /* MetalShader.metal */; };
 		98D5A68D266628DA0030D568 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A68C266628DA0030D568 /* Engine.swift */; };
 		98D5A69326662BD30030D568 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A69226662BD30030D568 /* ShaderLibrary.swift */; };
@@ -129,7 +127,6 @@
 		98D5A640266502420030D568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98D5A643266502420030D568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98D5A645266502420030D568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98D5A66A2665025A0030D568 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		98D5A66F266607990030D568 /* MetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalShader.metal; sourceTree = "<group>"; };
 		98D5A68C266628DA0030D568 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		98D5A69226662BD30030D568 /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
@@ -284,7 +281,6 @@
 				98D5A68F26662B550030D568 /* Resources */,
 				98D5A68B2666275F0030D568 /* Library */,
 				98D5A68A266627450030D568 /* EngineFile */,
-				98D5A636266502410030D568 /* MetalView */,
 				98D5A635266502410030D568 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -296,14 +292,6 @@
 				9809FAE7268D745E001EB201 /* MetalViewMAC.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		98D5A636266502410030D568 /* MetalView */ = {
-			isa = PBXGroup;
-			children = (
-				98D5A66A2665025A0030D568 /* MetalView.swift */,
-			);
-			path = MetalView;
 			sourceTree = "<group>";
 		};
 		98D5A68A266627450030D568 /* EngineFile */ = {
@@ -475,7 +463,6 @@
 			files = (
 				9809FAF9268D758A001EB201 /* ViewController.swift in Sources */,
 				9809FAC2268D745E001EB201 /* ComputeShader.metal in Sources */,
-				9809FAC3268D745E001EB201 /* MetalView.swift in Sources */,
 				9809FAC4268D745E001EB201 /* Defines.swift in Sources */,
 				9809FAC5268D745E001EB201 /* Matrix.swift in Sources */,
 				9809FAC6268D745E001EB201 /* VertexDescriptionLibrary.swift in Sources */,
@@ -511,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E969C0267392EC007BAA90 /* ComputeShader.metal in Sources */,
-				98D5A66B2665025A0030D568 /* MetalView.swift in Sources */,
 				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
 				98069338266DCC540012A983 /* Matrix.swift in Sources */,
 				982ED78B26C9FFD800F828D4 /* Input.swift in Sources */,

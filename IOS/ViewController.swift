@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  MetalView
-//
-//  Created by sws on 2021/5/31.
-//
-
+import MetalKit
 import UIKit
 
 class Touch
@@ -22,11 +16,27 @@ class Touch
 
 class ViewController: UIViewController {
 
+    var mtkView : MTKView!
+    var renderer:Renderer!
+    
     internal var _touches:[UITouch:Touch] = [:]
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      super.viewDidLoad()
+      mtkView = MTKView()
+      mtkView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(mtkView)
+      view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[mtkView]|", options: [], metrics: nil, views: ["mtkView" : mtkView]))
+      view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[mtkView]|", options: [], metrics: nil, views: ["mtkView" : mtkView]))
+      let device = MTLCreateSystemDefaultDevice()!
+      mtkView.device = device
+      mtkView.clearColor = Defines.clearColor
+      mtkView.colorPixelFormat = Defines.bgPixelFormat
+      mtkView.depthStencilPixelFormat = Defines.bgDepthPixelFormatl
+      
+      Engine.Ignite(device: device)
+      renderer = Renderer()
+      mtkView.delegate = renderer        // Do any additional setup after loading the view.
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
