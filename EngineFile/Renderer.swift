@@ -3,7 +3,10 @@ import MetalKit
 class Renderer:NSObject, MTKViewDelegate{
     //var triangle:Triangle = Triangle()
     var currentScene:ObjectScene = ObjectScene(name:"Computer Example")
-    
+    #if TARGET_OS_IPHONE
+    internal var _touches:[UITouch:Touch] = [:]
+    #endif
+
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         
     }
@@ -11,6 +14,7 @@ class Renderer:NSObject, MTKViewDelegate{
     
     
     func draw(in view: MTKView) {
+
         guard let drawable = view.currentDrawable, let rpd = view.currentRenderPassDescriptor else {return}
         currentScene.update(deltaTime: 1.0/Float(view.preferredFramesPerSecond))
         
