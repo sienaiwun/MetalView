@@ -11,8 +11,8 @@ class ObjectScene:Scene
         planeObject.setRotationX(Float(Double.pi/2))
         planeObject.setPositionY(-0.1)
         addChild(planeObject)
-        _camera.setPosition(0,0.5,5)
-        addChild(_camera)
+        camera.setPosition(0,0.5,5)
+        addChild(camera)
         addLight(Sun())
     }
 }

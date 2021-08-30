@@ -7,6 +7,8 @@ class Camera:Node
                                                                 aspectRatio: 1.0,
                                                                 near: 0.1,
                                                                 far: 1000)
+    public weak var input:Input?
+    
     
     var viewMatrix: matrix_float4x4 {
             return _viewMatrix
@@ -16,12 +18,25 @@ class Camera:Node
        }
        
    override func updateModelMatrix() {
+        let sensitivess:Float = 0.001
+        if let x = input?.mouseDeltaX as Float? 
+        {
+            self.setRotationY(self.getRotationY()+x*(-sensitivess))
+        }
+        if let y = input?.mouseDeltaY as Float?
+        {
+            self.setRotationX(self.getRotationX()+y*(-sensitivess))
+        }
        _viewMatrix = matrix_identity_float4x4
        _viewMatrix.rotate(angle: self.getRotationX(), axis: X_AXIS)
        _viewMatrix.rotate(angle: self.getRotationY(), axis: Y_AXIS)
        _viewMatrix.rotate(angle: self.getRotationZ(), axis: Z_AXIS)
        _viewMatrix.translate(direction: -getPosition())
    }
+    
+    /*override func update(deltaTime: Float) {
+       
+    }*/
     
     
     

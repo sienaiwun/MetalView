@@ -1,10 +1,10 @@
 import MetalKit
 
 class Scene :Node{
-    internal var _camera:Camera = Camera(name:"Camera")
+    internal var camera:Camera = Camera(name:"Camera")
     private var _lightManager = Lighting()
     private var _sceneConstant:SceneConstants = SceneConstants()
-    
+   
     func buildScene(){}
     
     override init(name:String) {
@@ -19,9 +19,9 @@ class Scene :Node{
     }
     
     override func doUpdate() {
-        _sceneConstant.viewMatrix = _camera.viewMatrix
-        _sceneConstant.projectionMatrix = _camera.projectionMatrix
-        _sceneConstant.cameraPos = _camera.getPosition()
+        _sceneConstant.viewMatrix = camera.viewMatrix
+        _sceneConstant.projectionMatrix = camera.projectionMatrix
+        _sceneConstant.cameraPos = camera.getPosition()
     }
     
     override func render(_ renderCommandEncoder: MTLRenderCommandEncoder!) {

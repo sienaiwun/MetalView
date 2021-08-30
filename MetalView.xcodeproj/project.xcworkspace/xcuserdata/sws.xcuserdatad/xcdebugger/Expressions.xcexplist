@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "MetalView.touchesEnded(_:with:):TouchController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_touches">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GameObject.doRender(_:):GameObject.swift">
          <PersistentStrings>
             <PersistentString
@@ -22,6 +30,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "Renderer.draw(in:):Renderer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_touches">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MetalView.touchesBegan(_:with:):TouchController.swift">
          <PersistentStrings>
             <PersistentString
@@ -30,12 +46,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MetalView.touchesEnded(_:with:):TouchController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "_touches">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "ViewController.touchesMoved(_:with:):ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
