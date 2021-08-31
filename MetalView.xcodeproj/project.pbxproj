@@ -61,8 +61,8 @@
 		982ED77726C65BE300F828D4 /* DataTypes.metal in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77326C65BE300F828D4 /* DataTypes.metal */; };
 		982ED77B26C6646B00F828D4 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77A26C6646B00F828D4 /* Lighting.swift */; };
 		982ED77C26C6646B00F828D4 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED77A26C6646B00F828D4 /* Lighting.swift */; };
-		982ED78B26C9FFD800F828D4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED78A26C9FFD800F828D4 /* Input.swift */; };
-		982ED78C26C9FFD800F828D4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED78A26C9FFD800F828D4 /* Input.swift */; };
+		982ED78B26C9FFD800F828D4 /* InputDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED78A26C9FFD800F828D4 /* InputDevice.swift */; };
+		982ED78C26C9FFD800F828D4 /* InputDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982ED78A26C9FFD800F828D4 /* InputDevice.swift */; };
 		9845F112269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
 		9845F113269015ED0035B683 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9845F10F269015ED0035B683 /* cruiser.mtl */; };
 		9845F114269015ED0035B683 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9845F110269015ED0035B683 /* cruiser.obj */; };
@@ -117,7 +117,7 @@
 		982ED77226C65BE300F828D4 /* LightModel.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = LightModel.metal; sourceTree = "<group>"; };
 		982ED77326C65BE300F828D4 /* DataTypes.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DataTypes.metal; sourceTree = "<group>"; };
 		982ED77A26C6646B00F828D4 /* Lighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lighting.swift; sourceTree = "<group>"; };
-		982ED78A26C9FFD800F828D4 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		982ED78A26C9FFD800F828D4 /* InputDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDevice.swift; sourceTree = "<group>"; };
 		9845F10F269015ED0035B683 /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
 		9845F110269015ED0035B683 /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
 		9845F111269015ED0035B683 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		982ED78926C9FFBC00F828D4 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				982ED78A26C9FFD800F828D4 /* Input.swift */,
+				982ED78A26C9FFD800F828D4 /* InputDevice.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -490,7 +490,7 @@
 				9809FAD5268D745E001EB201 /* Node.swift in Sources */,
 				9809FAD6268D745E001EB201 /* MetalShader.metal in Sources */,
 				9809FAD7268D745E001EB201 /* ObjectScene.swift in Sources */,
-				982ED78C26C9FFD800F828D4 /* Input.swift in Sources */,
+				982ED78C26C9FFD800F828D4 /* InputDevice.swift in Sources */,
 				982ED77C26C6646B00F828D4 /* Lighting.swift in Sources */,
 				9809FAD8268D745E001EB201 /* Camera.swift in Sources */,
 				9809FAD9268D745E001EB201 /* ShaderLibrary.swift in Sources */,
@@ -505,7 +505,7 @@
 				98E969C0267392EC007BAA90 /* ComputeShader.metal in Sources */,
 				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
 				98069338266DCC540012A983 /* Matrix.swift in Sources */,
-				982ED78B26C9FFD800F828D4 /* Input.swift in Sources */,
+				982ED78B26C9FFD800F828D4 /* InputDevice.swift in Sources */,
 				98D5A699266660780030D568 /* VertexDescriptionLibrary.swift in Sources */,
 				9806932526690F000012A983 /* Renderable.swift in Sources */,
 				982ED77426C65BE300F828D4 /* LightModel.metal in Sources */,
