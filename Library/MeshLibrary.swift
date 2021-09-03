@@ -6,6 +6,7 @@ enum MeshTypes {
     case Box
     case Cruiser
     case Chest
+    case Circle
 }
 class Submesh
 {
@@ -217,6 +218,7 @@ class MeshLibrary {
         meshes.updateValue(Box(), forKey: .Box)
         meshes.updateValue(Mesh(modelName: "cruiser"), forKey: .Cruiser)
         meshes.updateValue(Mesh(modelName: "chest"), forKey: .Chest)
+        meshes.updateValue(Circle(), forKey: .Circle)
     }
     
     public static func Descriptor(_ meshType: MeshTypes)->Mesh{
@@ -243,6 +245,31 @@ class Rectangle: Mesh{
         addSubmesh(Submesh(indices: [
             0,1,2,    0,2,3
         ]))
+    }
+}
+
+class Circle:Mesh{
+    let segmentNum = 64
+    override func createMesh() {
+        var verts:[FLOAT3] = [FLOAT3](repeating: FLOAT3(0,0,0), count:segmentNum+2)
+        for i in 0...segmentNum {
+            let theta:Float = Float(i)/Float(segmentNum)*2.0 * Float.pi;
+            verts[i+1] = FLOAT3(sin(theta),cos(theta),0)
+        }
+        for i in 0...segmentNum+1 {
+            addVertex(position: verts[i])
+        }
+        var indices:[UInt32] = [UInt32](repeating: 0, count: segmentNum*3)
+        var ib:Int = 0
+        for i in 0...segmentNum-1 {
+            indices[ib] = 0
+            ib+=1
+            indices[ib] = UInt32(1 + i + 0);
+            ib+=1
+            indices[ib] = UInt32(1 + i + 1);
+            ib+=1
+        }
+        addSubmesh(Submesh(indices: indices))
     }
 }
 

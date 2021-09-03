@@ -10,7 +10,6 @@ class ViewController: UIViewController {
     //internal var _touches:[UITouch:Touch] = [:]
 
     override func viewDidLoad() {
-        
       super.viewDidLoad()
         
     }
@@ -23,8 +22,8 @@ class ViewController: UIViewController {
             let y:Float = Float(location.y)/Float(size!.height)
             let pos:FLOAT2 = FLOAT2(x,y)
             let touch = Touch(pos: pos, startPos: pos, delta: FLOAT2(0,0))
-            if let mtkView = self.view as? MetalView{
-               mtkView.renderer._touches.updateValue(touch, forKey: uiTouch)
+            if let _ = self.view as? MetalView{
+                Engine.input._touches.updateValue(touch, forKey: uiTouch)
             }
            // _touches.
         }
@@ -38,8 +37,8 @@ class ViewController: UIViewController {
             let x:Float = Float(location.x)/Float(size!.width)
             let y:Float = Float(location.y)/Float(size!.height)
             let pos:FLOAT2 = FLOAT2(x,y)
-            if let mtkView = self.view as? MetalView{
-                let touch = mtkView.renderer._touches[uiTouch]!
+            if let _ = self.view as? MetalView{
+                let touch = Engine.input._touches[uiTouch]!
                 touch.pos = pos
                 touch.delta = FLOAT2(Float(location.x-prevLocation.x),Float(location.y-prevLocation.y))
             }
@@ -51,8 +50,8 @@ class ViewController: UIViewController {
         for uiTouch in touches{
            // var touch = _touches[uiTouch]!
             //print(String(format: "x: %f y:%f", touch.delta.x,touch.delta.y))
-            if let mtkView = self.view as? MetalView{
-                mtkView.renderer._touches.removeValue(forKey: uiTouch)
+            if let _ = self.view as? MetalView{
+                Engine.input._touches.removeValue(forKey: uiTouch)
                 
             }
         }

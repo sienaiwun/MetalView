@@ -12,7 +12,16 @@ class Touch
     }
 };
 
-
+#if USE_VIRTUAL_JOYSTICKS && IOS_TARGET
+    struct VirtualJoystick
+    {
+        public var pos:FLOAT2 = FLOAT2(0.2, 0.8);
+        public var  radius:Float = 0.1
+        public var  deadzoneRadius:Float = 0.01
+        public var  value_x:Float = 0.0
+        public var  value_y:Float = 0.0
+    };
+#endif
 
 class InputDevice
 {
@@ -24,19 +33,63 @@ class InputDevice
     var               mouseCurPos:FLOAT2 = FLOAT2(0,0)
     var               touches:[Touch] = []
     
+    #if IOS_TARGET
+        internal var _touches:[UITouch:Touch] = [:]
+    #if USE_VIRTUAL_JOYSTICKS
+        internal var joystick:VirtualJoystick = VirtualJoystick()
+    #endif
+    #endif
     
     public func update() {
+        #if IOS_TARGET
+        for(_,touch) in _touches
+        {
+            Engine.input.touches.append(touch)
+        }
+        #endif
         mouseDeltaX = 0.0
         mouseDeltaY = 0.0
+        #if USE_VIRTUAL_JOYSTICKS
+        joystick = VirtualJoystick()
+        #endif
         for touch in touches
         {
+            var used:Bool = false
+            #if USE_VIRTUAL_JOYSTICKS
+            let MAX_JOYSTICK_DIST:Float = 0.1
+            let downOffset = touch.startPos - joystick.pos;
+            let downDist          = simd_length(downOffset);
+            if(downDist > joystick.radius)
+            {
+                mouseDeltaX = touch.delta.x;
+                mouseDeltaY = touch.delta.y;
+                continue// didnt press joystick
+            }
+            joystick.pos = touch.startPos;
+            var offset:FLOAT2 = touch.pos - joystick.pos;
+            let dist = max(simd_length(offset), 0.001);
+            offset = offset/dist * min(max(0.0, dist - joystick.deadzoneRadius), MAX_JOYSTICK_DIST);
+            joystick.pos      += offset;
+            joystick.value_x  = offset.x / MAX_JOYSTICK_DIST;
+            joystick.value_y  = -offset.y / MAX_JOYSTICK_DIST;
+            used = true;
+            #endif
+            if(used){
+                continue
+            }
             mouseDeltaX = touch.delta.x;
             mouseDeltaY = touch.delta.y;
         }
+        
     }
     
     public func clear(){
         touches.removeAll()
+    }
+    
+    public func render(_ renderCommandEncoder: MTLRenderCommandEncoder!) {
+        renderCommandEncoder.pushDebugGroup("Rendering Input UI")
+        renderCommandEncoder.popDebugGroup()
     }
     
     
