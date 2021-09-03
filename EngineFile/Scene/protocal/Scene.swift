@@ -26,6 +26,8 @@ class Scene :Node{
     
     override func render(_ renderCommandEncoder: MTLRenderCommandEncoder!) {
         renderCommandEncoder.pushDebugGroup("Rendering Scene \(getName())")
+        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.depthState(.Regular))
+        renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
         renderCommandEncoder.setVertexBytes(&_sceneConstant, length: SceneConstants.stride(), index: 2)
         _lightManager.setLightData(renderCommandEncoder)
         super.render(renderCommandEncoder)

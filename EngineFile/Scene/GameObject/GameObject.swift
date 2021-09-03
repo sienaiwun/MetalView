@@ -35,8 +35,6 @@ extension GameObject: Renderable
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder!)
     {
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride(), index:1)
-        renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
-        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.depthState(.Regular))
         renderCommandEncoder.setFragmentSamplerState(SamplerLibrary.Descriptor(.Bilinar), index: 0)
         mesh.drawPrimitives(renderCommandEncoder)
     }

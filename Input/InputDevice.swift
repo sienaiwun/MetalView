@@ -37,6 +37,7 @@ class InputDevice
         internal var _touches:[UITouch:Touch] = [:]
     #if USE_VIRTUAL_JOYSTICKS
         internal var joystick:VirtualJoystick = VirtualJoystick()
+        internal var circle:GameObject = GameObject(meshType: .Circle)
     #endif
     #endif
     
@@ -87,9 +88,21 @@ class InputDevice
         touches.removeAll()
     }
     
-    public func render(_ renderCommandEncoder: MTLRenderCommandEncoder!) {
+    public func render(_ renderCommandEncoder: MTLRenderCommandEncoder!, screenSize:FLOAT2 ) {
+        #if USE_VIRTUAL_JOYSTICKS
+        
+        let aspectRatio = screenSize.x/screenSize.y
+        let position = joystick.pos;
+        let scale    = joystick.radius;
+        
+        circle.setPosition(-1.0 + position.x * 2.0, 1.0 - position.y * 2.0,0.0)
+        circle.setScale(scale, scale * aspectRatio, 1.0)
         renderCommandEncoder.pushDebugGroup("Rendering Input UI")
+        renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.UI))
+        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.depthState(.UI))
+        circle.render(renderCommandEncoder)
         renderCommandEncoder.popDebugGroup()
+        #endif
     }
     
     
