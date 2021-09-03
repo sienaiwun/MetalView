@@ -3,9 +3,9 @@ import MetalKit
 class Renderer:NSObject, MTKViewDelegate{
     //var triangle:Triangle = Triangle()
     var currentScene:ObjectScene = ObjectScene(name:"Computer Example")
+    var input:InputDevice = InputDevice()
     #if IOS_TARGET
-    var input:Input = Input()
-    internal var _touches:[UITouch:Touch] = [:]
+     internal var _touches:[UITouch:Touch] = [:]
     #endif
     
     override init() {
@@ -19,10 +19,12 @@ class Renderer:NSObject, MTKViewDelegate{
     
     
     func draw(in view: MTKView) {
+        #if IOS_TARGET
         for(_,touch) in _touches
         {
             input.touches.append(touch)
         }
+        #endif
         input.update()
         
 

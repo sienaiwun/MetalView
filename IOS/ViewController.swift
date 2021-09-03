@@ -1,18 +1,6 @@
 import MetalKit
 import UIKit
 
-class Touch
-{
-    var pos:FLOAT2
-    var startPos:FLOAT2
-    var delta:FLOAT2
-    init(pos:FLOAT2,startPos:FLOAT2,delta:FLOAT2) {
-        self.pos = pos
-        self.startPos = startPos
-        self.delta = delta
-    }
-};
-
 
 class ViewController: UIViewController {
 

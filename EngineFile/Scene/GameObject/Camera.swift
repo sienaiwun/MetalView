@@ -7,7 +7,7 @@ class Camera:Node
                                                                 aspectRatio: 1.0,
                                                                 near: 0.1,
                                                                 far: 1000)
-    public weak var input:Input?
+    public weak var input:InputDevice?
     
     
     var viewMatrix: matrix_float4x4 {
