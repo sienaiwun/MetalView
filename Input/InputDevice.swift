@@ -18,8 +18,8 @@ class Touch
         public var pos:FLOAT2 = FLOAT2(0.2, 0.8);
         public var  radius:Float = 0.1
         public var  deadzoneRadius:Float = 0.01
-        public var  value_x:Float = 0.0
-        public var  value_y:Float = 0.0
+        public var  value_x:Float! = 0.0
+        public var  value_y:Float! = 0.0
     };
 #endif
 
@@ -36,7 +36,7 @@ class InputDevice
     #if IOS_TARGET
         internal var _touches:[UITouch:Touch] = [:]
     #if USE_VIRTUAL_JOYSTICKS
-        internal var joystick:VirtualJoystick = VirtualJoystick()
+        internal var joystick:VirtualJoystick! = VirtualJoystick()
         internal var circle:GameObject = GameObject(meshType: .Circle)
     #endif
     #endif

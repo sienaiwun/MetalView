@@ -121,4 +121,14 @@ extension matrix_float4x4{
             return result
         }
     
+    func toUpperLeft3x3() -> matrix_float3x3 {
+        let x = columns.0
+        let y = columns.1
+        let z = columns.2
+        
+        return matrix_float3x3(columns: (vector_float3(x.x, x.y, x.z),
+                                         vector_float3(y.x, y.y, y.z),
+                                         vector_float3(z.x, z.y, z.z)))
+    }
+    
 }

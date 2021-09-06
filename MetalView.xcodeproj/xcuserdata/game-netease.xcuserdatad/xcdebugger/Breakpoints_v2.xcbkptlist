@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "doRender(_:)"
+            landmarkName = "doCompute(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "doRender(_:)"
+            landmarkName = "doCompute(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -40,6 +40,17 @@ public class Node{
         return right * rotat3x3
     }
     
+    var forward:FLOAT3
+    {
+        let forward = FLOAT3(0,0,-1);
+        var rotateMatrix:matrix_float4x4 = matrix_identity_float4x4
+        rotateMatrix.rotate(angle: _rotation.x, axis: X_AXIS)
+        rotateMatrix.rotate(angle: _rotation.y, axis: Y_AXIS)
+        rotateMatrix.rotate(angle: _rotation.z, axis: Z_AXIS)
+        let rotat3x3:matrix_float3x3 = rotateMatrix.toUpperLeft3x3()
+        return forward * rotat3x3
+    }
+    
     func updateModelMatrix()
     {
         _modelMatrix.translate(direction: _position)
