@@ -41,7 +41,7 @@ class InputDevice
     #endif
     #endif
     
-    public func update() {
+    public func update(deltaTime:Float, screenSize:FLOAT2) {
         #if IOS_TARGET
         for(_,touch) in _touches
         {
@@ -82,21 +82,24 @@ class InputDevice
             mouseDeltaY = touch.delta.y;
         }
         
+        
+        let aspectRatio = screenSize.x/screenSize.y
+        let position = joystick.pos;
+        let scale    = joystick.radius;
+        #if USE_VIRTUAL_JOYSTICKS
+        circle.reset()
+        circle.setPosition(-1.0 + position.x * 2.0, 1.0 - position.y * 2.0,0.0)
+        circle.setScale(scale, scale * aspectRatio, 1.0)
+        circle.update(deltaTime: deltaTime)
+        #endif
     }
     
     public func clear(){
         touches.removeAll()
     }
     
-    public func render(_ renderCommandEncoder: MTLRenderCommandEncoder!, screenSize:FLOAT2 ) {
+    public func render(_ renderCommandEncoder: MTLRenderCommandEncoder! ) {
         #if USE_VIRTUAL_JOYSTICKS
-        
-        let aspectRatio = screenSize.x/screenSize.y
-        let position = joystick.pos;
-        let scale    = joystick.radius;
-        
-        circle.setPosition(-1.0 + position.x * 2.0, 1.0 - position.y * 2.0,0.0)
-        circle.setScale(scale, scale * aspectRatio, 1.0)
         renderCommandEncoder.pushDebugGroup("Rendering Input UI")
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.UI))
         renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.depthState(.UI))

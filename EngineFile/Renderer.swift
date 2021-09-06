@@ -18,10 +18,11 @@ class Renderer:NSObject, MTKViewDelegate{
     
     func draw(in view: MTKView) {
        
-        Engine.input.update()
-        guard let drawable = view.currentDrawable, let rpd = view.currentRenderPassDescriptor else {return}
+       guard let drawable = view.currentDrawable, let rpd = view.currentRenderPassDescriptor else {return}
         screenSize = FLOAT2(Float(view.drawableSize.width),Float(view.drawableSize.height))
-        currentScene.update(deltaTime: 1.0/Float(view.preferredFramesPerSecond))
+        let detatime:Float = 1.0/Float(view.preferredFramesPerSecond)
+        Engine.input.update(deltaTime: detatime, screenSize: screenSize)
+        currentScene.update(deltaTime: detatime)
         let commandBuffer = Engine.CommandQueue?.makeCommandBuffer()
         commandBuffer?.label = "command buffer"
         let computeEncoder = commandBuffer?.makeComputeCommandEncoder()
@@ -32,7 +33,7 @@ class Renderer:NSObject, MTKViewDelegate{
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: rpd);
         commandEncoder?.label = "Graph Encoder"
         currentScene.render(commandEncoder)
-        Engine.input.render(commandEncoder, screenSize: screenSize)
+        Engine.input.render(commandEncoder)
         commandEncoder?.endEncoding()
         commandBuffer?.present(drawable)
         commandBuffer?.commit()

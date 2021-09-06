@@ -51,6 +51,14 @@ public class Node{
         updateModelMatrix();
     }
     
+    func reset()
+    {
+        _modelMatrix = matrix_identity_float4x4
+        _position = FLOAT3(0,0,0)
+        _scale = FLOAT3(1,1,1)
+        _rotation = FLOAT3(0,0,0)
+    }
+    
     func update(deltaTime:Float)
     {
         doUpdate()

@@ -19,12 +19,9 @@ class Camera:Node
        
    override func updateModelMatrix() {
         let sensitivess:Float = 0.001
-        if let x = input?.mouseDeltaX as Float? 
+        if let x = input?.mouseDeltaX as Float? ,let y = input?.mouseDeltaY as Float?
         {
             self.setRotationY(self.getRotationY()+x*(-sensitivess))
-        }
-        if let y = input?.mouseDeltaY as Float?
-        {
             self.setRotationX(self.getRotationX()+y*(-sensitivess))
         }
        _viewMatrix = matrix_identity_float4x4
