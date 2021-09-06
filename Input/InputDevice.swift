@@ -32,7 +32,8 @@ class InputDevice
     var               mouseDownPos:FLOAT2 = FLOAT2(0,0)
     var               mouseCurPos:FLOAT2 = FLOAT2(0,0)
     var               touches:[Touch] = []
-    
+    var               keyPressed:Set<UInt16> = []
+
     #if IOS_TARGET
         internal var _touches:[UITouch:Touch] = [:]
     #if USE_VIRTUAL_JOYSTICKS
@@ -83,10 +84,11 @@ class InputDevice
         }
         
         
+       
+        #if USE_VIRTUAL_JOYSTICKS
         let aspectRatio = screenSize.x/screenSize.y
         let position = joystick.pos;
         let scale    = joystick.radius;
-        #if USE_VIRTUAL_JOYSTICKS
         circle.reset()
         circle.setPosition(-1.0 + position.x * 2.0, 1.0 - position.y * 2.0,0.0)
         circle.setScale(scale, scale * aspectRatio, 1.0)
