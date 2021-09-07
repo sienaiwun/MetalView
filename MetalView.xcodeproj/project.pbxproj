@@ -73,8 +73,8 @@
 		9846110826CB99F6003E7693 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846110626CB99F6003E7693 /* MetalView.swift */; };
 		98C8097826E229C700BDADEF /* UIShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097726E229C700BDADEF /* UIShader.metal */; };
 		98C8097926E229C700BDADEF /* UIShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097726E229C700BDADEF /* UIShader.metal */; };
-		98C8097D26E6028600BDADEF /* Keys.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097C26E6028600BDADEF /* Keys.metal */; };
-		98C8098026E645E000BDADEF /* Keys.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097C26E6028600BDADEF /* Keys.metal */; };
+		98C8098626E705AE00BDADEF /* Keysswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C8098526E705AE00BDADEF /* Keysswift.swift */; };
+		98C8098726E705AE00BDADEF /* Keysswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C8098526E705AE00BDADEF /* Keysswift.swift */; };
 		98D5A638266502410030D568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A637266502410030D568 /* AppDelegate.swift */; };
 		98D5A63A266502410030D568 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A639266502410030D568 /* SceneDelegate.swift */; };
 		98D5A63C266502410030D568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A63B266502410030D568 /* ViewController.swift */; };
@@ -127,7 +127,7 @@
 		9845F111269015ED0035B683 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
 		9846110626CB99F6003E7693 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		98C8097726E229C700BDADEF /* UIShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = UIShader.metal; sourceTree = "<group>"; };
-		98C8097C26E6028600BDADEF /* Keys.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Keys.metal; sourceTree = "<group>"; };
+		98C8098526E705AE00BDADEF /* Keysswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keysswift.swift; sourceTree = "<group>"; };
 		98D5A634266502410030D568 /* MetalViewIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalViewIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D5A637266502410030D568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D5A639266502410030D568 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				9809FAFC268D8B89001EB201 /* Info.plist */,
 				9809FAF7268D758A001EB201 /* ViewController.swift */,
 				9809FAF2268D7547001EB201 /* AppDelegate.swift */,
-				98C8097C26E6028600BDADEF /* Keys.metal */,
+				98C8098526E705AE00BDADEF /* Keysswift.swift */,
 			);
 			path = MAC;
 			sourceTree = "<group>";
@@ -480,7 +480,6 @@
 				9809FAC6268D745E001EB201 /* VertexDescriptionLibrary.swift in Sources */,
 				9809FAC7268D745E001EB201 /* Renderable.swift in Sources */,
 				98C8097926E229C700BDADEF /* UIShader.metal in Sources */,
-				98C8097D26E6028600BDADEF /* Keys.metal in Sources */,
 				9809FAC8268D745E001EB201 /* Engine.swift in Sources */,
 				9809FB09268D8C42001EB201 /* AppDelegate.swift in Sources */,
 				9809FACA268D745E001EB201 /* Renderer.swift in Sources */,
@@ -493,6 +492,7 @@
 				9809FACF268D745E001EB201 /* GameObject.swift in Sources */,
 				9809FAD0268D745E001EB201 /* DepthStencilStateLibrary.swift in Sources */,
 				9809FAD1268D745E001EB201 /* Computable.swift in Sources */,
+				98C8098726E705AE00BDADEF /* Keysswift.swift in Sources */,
 				9809FAD2268D745E001EB201 /* Types.swift in Sources */,
 				982ED77526C65BE300F828D4 /* LightModel.metal in Sources */,
 				9809FAD3268D745E001EB201 /* RenderPipelineStateLibrary.swift in Sources */,
@@ -526,10 +526,10 @@
 				982D29282671F39600701E0F /* SamplerLibrary.swift in Sources */,
 				982ED77B26C6646B00F828D4 /* Lighting.swift in Sources */,
 				98E969BA26735F05007BAA90 /* ComputeRenderPipelineState.swift in Sources */,
+				98C8098626E705AE00BDADEF /* Keysswift.swift in Sources */,
 				982D29252671F37D00701E0F /* TextureLibrary.swift in Sources */,
 				9806932C266A4D2D0012A983 /* MeshLibrary.swift in Sources */,
 				98069330266A592A0012A983 /* GameObject.swift in Sources */,
-				98C8098026E645E000BDADEF /* Keys.metal in Sources */,
 				98E969C32674941C007BAA90 /* DepthStencilStateLibrary.swift in Sources */,
 				98E969BD26738EEB007BAA90 /* Computable.swift in Sources */,
 				98D5A696266639A80030D568 /* Types.swift in Sources */,

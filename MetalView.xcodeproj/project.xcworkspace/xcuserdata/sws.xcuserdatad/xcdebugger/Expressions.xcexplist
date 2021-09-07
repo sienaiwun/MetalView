@@ -46,10 +46,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "ViewController.touchesMoved(_:with:):ViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "ViewController.viewDidLoad():ViewController.swift">
+         contextName = "ViewController.mouseDragged(with:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.deltaX">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

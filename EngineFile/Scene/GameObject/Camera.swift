@@ -19,7 +19,7 @@ class Camera:Node
        
    override func updateModelMatrix() {
         let sensitivess:Float = 0.001
-        if let x = input?.mouseDeltaX as Float? ,let y = input?.mouseDeltaY as Float?
+        if let x = input?.mouseDeltaX ,let y = input?.mouseDeltaY 
         {
             self.setRotationY(self.getRotationY()+x*(-sensitivess))
             self.setRotationX(self.getRotationX()+y*(-sensitivess))

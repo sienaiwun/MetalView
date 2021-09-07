@@ -1,13 +1,7 @@
 import MetalKit
 import Cocoa
 
-enum KEYS:UInt16
-{
-    case W    = 0x0d
-    case S    = 0x01
-    case A    = 0x00 // A,
-    case D    = 0x02 // D
-};
+
 
 class ViewController: NSViewController {
     
@@ -42,8 +36,35 @@ class ViewController: NSViewController {
         Engine.input.keyPressed.remove(event.keyCode)
     }
     
+    override func mouseUp(with event: NSEvent) {
+        Engine.input.mouseDown = true;
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        Engine.input.mouseDown = true;
+
+        Engine.input.mouseCurPos = FLOAT2(Float(event.locationInWindow.x), Float(event.locationInWindow.y));
+        Engine.input.mouseCurPos.x /= Float(event.window!.frame.size.width)
+        Engine.input.mouseCurPos.x /= Float(event.window!.frame.size.height)
+        Engine.input.mouseCurPos.y = 1.0 - Engine.input.mouseCurPos.y;
+
+        Engine.input.mouseDownPos = Engine.input.mouseCurPos
+    }
+    
     override func mouseDragged(with event: NSEvent) {
-        //ßprint("%d",event.keyCode)
+        Engine.input.mouseDeltaX = Float(event.deltaX);
+        Engine.input.mouseDeltaY = Float(event.deltaY);
+
+        Engine.input.mouseCurPos = FLOAT2(Float(event.locationInWindow.x), Float(event.locationInWindow.y));
+        Engine.input.mouseCurPos.x /= Float(event.window!.frame.size.width)
+        Engine.input.mouseCurPos.x /= Float(event.window!.frame.size.height)
+        Engine.input.mouseCurPos.y = 1.0 - Engine.input.mouseCurPos.y;
+    }
+    
+    override func rightMouseDragged(with event: NSEvent)
+    {
+        Engine.input.mouseDeltaX = Float(event.deltaX)
+        Engine.input.mouseDeltaY = Float(event.deltaY)
     }
 }
 

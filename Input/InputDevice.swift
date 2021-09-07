@@ -49,8 +49,6 @@ class InputDevice
             Engine.input.touches.append(touch)
         }
         #endif
-        mouseDeltaX = 0.0
-        mouseDeltaY = 0.0
         #if USE_VIRTUAL_JOYSTICKS
         joystick = VirtualJoystick()
         #endif
@@ -97,6 +95,8 @@ class InputDevice
     }
     
     public func clear(){
+        mouseDeltaX = 0.0
+        mouseDeltaY = 0.0
         touches.removeAll()
     }
     
