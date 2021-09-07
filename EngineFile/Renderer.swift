@@ -1,20 +1,20 @@
 import MetalKit
 
-class Renderer:NSObject, MTKViewDelegate{
+class Renderer:NSObject{
     //var triangle:Triangle = Triangle()
     var currentScene:ObjectScene = ObjectScene(name:"Computer Example")
     var screenSize:FLOAT2 = FLOAT2()
-  
-    
     override init() {
         currentScene.camera.input = Engine.input
     }
+}
 
+extension Renderer:MTKViewDelegate
+{
+    
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         
     }
-    
-    
     
     func draw(in view: MTKView) {
        
@@ -40,7 +40,5 @@ class Renderer:NSObject, MTKViewDelegate{
         
         Engine.input.clear()
     }
-    
-    
 }
 
