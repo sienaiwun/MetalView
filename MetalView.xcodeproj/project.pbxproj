@@ -74,6 +74,7 @@
 		98C8097826E229C700BDADEF /* UIShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097726E229C700BDADEF /* UIShader.metal */; };
 		98C8097926E229C700BDADEF /* UIShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097726E229C700BDADEF /* UIShader.metal */; };
 		98C8097D26E6028600BDADEF /* Keys.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097C26E6028600BDADEF /* Keys.metal */; };
+		98C8098026E645E000BDADEF /* Keys.metal in Sources */ = {isa = PBXBuildFile; fileRef = 98C8097C26E6028600BDADEF /* Keys.metal */; };
 		98D5A638266502410030D568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A637266502410030D568 /* AppDelegate.swift */; };
 		98D5A63A266502410030D568 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A639266502410030D568 /* SceneDelegate.swift */; };
 		98D5A63C266502410030D568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5A63B266502410030D568 /* ViewController.swift */; };
@@ -528,6 +529,7 @@
 				982D29252671F37D00701E0F /* TextureLibrary.swift in Sources */,
 				9806932C266A4D2D0012A983 /* MeshLibrary.swift in Sources */,
 				98069330266A592A0012A983 /* GameObject.swift in Sources */,
+				98C8098026E645E000BDADEF /* Keys.metal in Sources */,
 				98E969C32674941C007BAA90 /* DepthStencilStateLibrary.swift in Sources */,
 				98E969BD26738EEB007BAA90 /* Computable.swift in Sources */,
 				98D5A696266639A80030D568 /* Types.swift in Sources */,

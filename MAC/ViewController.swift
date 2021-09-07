@@ -1,6 +1,14 @@
 import MetalKit
 import Cocoa
 
+enum KEYS:UInt16
+{
+    case W    = 0x0d
+    case S    = 0x01
+    case A    = 0x00 // A,
+    case D    = 0x02 // D
+};
+
 class ViewController: NSViewController {
     
     override func viewDidLoad() {
@@ -24,7 +32,6 @@ class ViewController: NSViewController {
     }
 
     override func keyDown(with event: NSEvent) {
-        print("%d",event.keyCode)
         if (!event.isARepeat)
         {
             Engine.input.keyPressed.insert(event.keyCode)
@@ -36,7 +43,7 @@ class ViewController: NSViewController {
     }
     
     override func mouseDragged(with event: NSEvent) {
-        print("%d",event.keyCode)
+        //ßprint("%d",event.keyCode)
     }
 }
 
