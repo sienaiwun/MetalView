@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Renderer.init(_:):Renderer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.drawableSize.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MetalView.touchesEnded(_:with:):TouchController.swift">
          <PersistentStrings>
             <PersistentString

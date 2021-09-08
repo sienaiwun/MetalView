@@ -10,8 +10,8 @@ class Renderer:NSObject{
     init(_ view: MTKView) {
         super.init()
         screenSize = FLOAT2(Float(view.drawableSize.width),Float(view.drawableSize.height))
-        currentScene.camera.input = Engine.input
         createBaseRenderPass()
+        currentScene.camera.input = Engine.input
     }
     
     
@@ -33,7 +33,8 @@ class Renderer:NSObject{
         baseRenderPassDescriptor?.colorAttachments[0].loadAction = .clear
         baseRenderPassDescriptor?.colorAttachments[0].clearColor = Defines.clearColor
         baseRenderPassDescriptor?.depthAttachment.texture = bgDepthRT
-
+        baseRenderPassDescriptor?.depthAttachment.loadAction = .clear
+        baseRenderPassDescriptor?.depthAttachment.storeAction = .dontCare
     }
 }
 
@@ -41,8 +42,10 @@ extension Renderer:MTKViewDelegate
 {
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        
+        screenSize = FLOAT2(Float(size.width),Float(size.height))
+        createBaseRenderPass()
     }
+    
     
     func draw(in view: MTKView) {
        
