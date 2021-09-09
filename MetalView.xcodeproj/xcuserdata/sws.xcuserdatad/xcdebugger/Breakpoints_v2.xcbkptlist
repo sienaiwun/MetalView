@@ -418,5 +418,163 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C3E6217-55A7-4696-9B4A-0CCB323E7CF9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D002F671-1594-428D-B05C-E85D5096483A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EngineFile/MetalView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BED198E-3FE3-44CB-8DF1-3801019B2BFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/LauchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewSize"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DBB7D4B-356C-460E-A43D-4991999EF422"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/LauchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewSize"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61D1087F-3E9D-4DD7-A6B7-7790F05FE1DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/LauchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "viewSize"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "61D1087F-3E9D-4DD7-A6B7-7790F05FE1DB - 9390fd37c2e534d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(viewSize in _352BA4D304ADED839685518615AEE92B).getter : __C.CGSize"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "61D1087F-3E9D-4DD7-A6B7-7790F05FE1DB - 9390fd37c2e534d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(viewSize in _352BA4D304ADED839685518615AEE92B).getter : __C.CGSize"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "595">
+               </Location>
+               <Location
+                  uuid = "61D1087F-3E9D-4DD7-A6B7-7790F05FE1DB - 9390fd37c2e534d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(viewSize in _352BA4D304ADED839685518615AEE92B).getter : __C.CGSize"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "61D1087F-3E9D-4DD7-A6B7-7790F05FE1DB - 9390fd37c2e534d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(viewSize in _352BA4D304ADED839685518615AEE92B).getter : __C.CGSize"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "1292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65E5D3A2-1D56-4781-8D2D-B5EC1612EAC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/LauchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewSize"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

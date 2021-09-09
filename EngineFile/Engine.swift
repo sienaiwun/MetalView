@@ -12,6 +12,7 @@ class Engine
     public static var Device: MTLDevice!
     public static var CommandQueue: MTLCommandQueue!
     public static var input:InputDevice = InputDevice()
+    public static var msaaSample = 1
     
     public static func Ignite(device: MTLDevice)
     {

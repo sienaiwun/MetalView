@@ -3,10 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Renderer.init(_:):Renderer.swift">
+         contextName = "ViewController.mouseDragged(with:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "view.drawableSize.width">
+               value = "event.deltaX">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LauchViewController.viewSize.getter:LauchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "resButton.stringValue">
+            </PersistentString>
+            <PersistentString
+               value = "msaaButton.stringValue">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -57,15 +68,15 @@
          contextName = "ViewController.viewDidLoad():ViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "ViewController.touchesMoved(_:with:):ViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ViewController.mouseDragged(with:):ViewController.swift">
+         contextName = "Renderer.init(_:):Renderer.swift">
          <PersistentStrings>
             <PersistentString
-               value = "event.deltaX">
+               value = "view.drawableSize.width">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.touchesMoved(_:with:):ViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

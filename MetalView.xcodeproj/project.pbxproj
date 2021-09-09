@@ -51,6 +51,7 @@
 		981D7D2526BD0DFB004F3FAF /* Chest_Wood_Base_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 981D7D1E26BD0DFB004F3FAF /* Chest_Wood_Base_Color.png */; };
 		981D7D2626BD0DFB004F3FAF /* Chest_Metal_Base_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 981D7D1F26BD0DFB004F3FAF /* Chest_Metal_Base_Color.png */; };
 		981D7D2726BD0DFB004F3FAF /* Chest_Metal_Base_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 981D7D1F26BD0DFB004F3FAF /* Chest_Metal_Base_Color.png */; };
+		982A183F26E9DBD1008B1989 /* LauchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A183E26E9DBD1008B1989 /* LauchViewController.swift */; };
 		982D29252671F37D00701E0F /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29242671F37D00701E0F /* TextureLibrary.swift */; };
 		982D29282671F39600701E0F /* SamplerLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D29272671F39600701E0F /* SamplerLibrary.swift */; };
 		982D292C2671F5C000701E0F /* rename.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 982D292B2671F5C000701E0F /* rename.jpeg */; };
@@ -114,6 +115,7 @@
 		981D7D1D26BD0DFB004F3FAF /* chest.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chest.obj; sourceTree = "<group>"; };
 		981D7D1E26BD0DFB004F3FAF /* Chest_Wood_Base_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chest_Wood_Base_Color.png; sourceTree = "<group>"; };
 		981D7D1F26BD0DFB004F3FAF /* Chest_Metal_Base_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chest_Metal_Base_Color.png; sourceTree = "<group>"; };
+		982A183E26E9DBD1008B1989 /* LauchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchViewController.swift; sourceTree = "<group>"; };
 		982D29242671F37D00701E0F /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
 		982D29272671F39600701E0F /* SamplerLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerLibrary.swift; sourceTree = "<group>"; };
 		982D292B2671F5C000701E0F /* rename.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rename.jpeg; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				9809FB12268D8E0B001EB201 /* Mac.storyboard */,
 				9809FAFC268D8B89001EB201 /* Info.plist */,
+				982A183E26E9DBD1008B1989 /* LauchViewController.swift */,
 				9809FAF7268D758A001EB201 /* ViewController.swift */,
 				9809FAF2268D7547001EB201 /* AppDelegate.swift */,
 				98C8098526E705AE00BDADEF /* Keysswift.swift */,
@@ -488,6 +491,7 @@
 				9809FACC268D745E001EB201 /* ComputeRenderPipelineState.swift in Sources */,
 				9846110826CB99F6003E7693 /* MetalView.swift in Sources */,
 				9809FACD268D745E001EB201 /* TextureLibrary.swift in Sources */,
+				982A183F26E9DBD1008B1989 /* LauchViewController.swift in Sources */,
 				9809FACE268D745E001EB201 /* MeshLibrary.swift in Sources */,
 				9809FACF268D745E001EB201 /* GameObject.swift in Sources */,
 				9809FAD0268D745E001EB201 /* DepthStencilStateLibrary.swift in Sources */,
