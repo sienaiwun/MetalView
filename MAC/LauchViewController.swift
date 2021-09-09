@@ -1,10 +1,3 @@
-//
-//  LauchViewController.swift
-//  MetalViewMAC
-//
-//  Created by sws on 2021/9/9.
-//
-
 import Cocoa
 
 class LauchViewController: NSViewController {
@@ -53,14 +46,14 @@ class LauchViewController: NSViewController {
         resButton.addItems(withTitles: ["1024","512","2048"])
         msaaButton.removeAllItems()
         msaaButton.addItems(withTitles: ["1x","2x","4x","8x"])
-        // Do view setup here.
+ 
     }
     
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        let DestViewController: ViewController = segue.destinationController as! ViewController
-        DestViewController.preferredContentSize = viewSize
+    @IBAction func Click(_ sender: Any) {
+        let vc:ViewController! = NSStoryboard(name: "Mac", bundle: nil).instantiateController(withIdentifier: "ViewController") as! ViewController
+        vc.preferredContentSize = viewSize
+        self.view.window!.contentViewController = vc
+        
         Engine.msaaSample = msaaSample
     }
-  
-    
 }

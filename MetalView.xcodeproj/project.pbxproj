@@ -43,6 +43,7 @@
 		9809FAFD268D8B89001EB201 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9809FAFC268D8B89001EB201 /* Info.plist */; };
 		9809FB09268D8C42001EB201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9809FAF2268D7547001EB201 /* AppDelegate.swift */; };
 		9809FB13268D8E0B001EB201 /* Mac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9809FB12268D8E0B001EB201 /* Mac.storyboard */; };
+		9818BD2526EA11550012671C /* LauchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9818BD2426EA11550012671C /* LauchViewController.swift */; };
 		981D7D2026BD0DFB004F3FAF /* chest.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 981D7D1C26BD0DFB004F3FAF /* chest.mtl */; };
 		981D7D2126BD0DFB004F3FAF /* chest.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 981D7D1C26BD0DFB004F3FAF /* chest.mtl */; };
 		981D7D2226BD0DFB004F3FAF /* chest.obj in Resources */ = {isa = PBXBuildFile; fileRef = 981D7D1D26BD0DFB004F3FAF /* chest.obj */; };
@@ -111,6 +112,7 @@
 		9809FAF7268D758A001EB201 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9809FAFC268D8B89001EB201 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9809FB12268D8E0B001EB201 /* Mac.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mac.storyboard; sourceTree = "<group>"; };
+		9818BD2426EA11550012671C /* LauchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchViewController.swift; sourceTree = "<group>"; };
 		981D7D1C26BD0DFB004F3FAF /* chest.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chest.mtl; sourceTree = "<group>"; };
 		981D7D1D26BD0DFB004F3FAF /* chest.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chest.obj; sourceTree = "<group>"; };
 		981D7D1E26BD0DFB004F3FAF /* Chest_Wood_Base_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chest_Wood_Base_Color.png; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				98D5A642266502420030D568 /* LaunchScreen.storyboard */,
 				98D5A63D266502410030D568 /* Main.storyboard */,
 				98D5A645266502420030D568 /* Info.plist */,
+				9818BD2426EA11550012671C /* LauchViewController.swift */,
 			);
 			path = IOS;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 			files = (
 				98E969C0267392EC007BAA90 /* ComputeShader.metal in Sources */,
 				98D5A69F2667BD090030D568 /* Defines.swift in Sources */,
+				9818BD2526EA11550012671C /* LauchViewController.swift in Sources */,
 				98069338266DCC540012A983 /* Matrix.swift in Sources */,
 				982ED78B26C9FFD800F828D4 /* InputDevice.swift in Sources */,
 				98C8097826E229C700BDADEF /* UIShader.metal in Sources */,

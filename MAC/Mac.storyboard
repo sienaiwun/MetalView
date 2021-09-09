@@ -718,8 +718,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="Click:" target="XfG-lQ-9wD" id="fN5-Td-h9g"/>
-                                    <segue destination="SjE-mU-zHc" kind="modal" id="lfU-7D-clp"/>
+                                    <action selector="Click:" target="XfG-lQ-9wD" id="zGn-fU-uw4"/>
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeK-wT-zDg">
@@ -785,14 +784,14 @@
         <scene sceneID="vG7-zx-lVf">
             <objects>
                 <customObject id="N3D-0d-Rjq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController id="SjE-mU-zHc" customClass="ViewController" customModule="MetalViewMAC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="SjE-mU-zHc" customClass="ViewController" customModule="MetalViewMAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" identifier="id2" id="rhX-5P-iQn" customClass="MetalView" customModule="MetalViewMAC" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-533" y="640"/>
+            <point key="canvasLocation" x="-567" y="700"/>
         </scene>
     </scenes>
 </document>
