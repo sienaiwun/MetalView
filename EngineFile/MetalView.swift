@@ -13,7 +13,7 @@ class MetalView:MTKView
         self.depthStencilPixelFormat = Defines.bgDepthPixelFormatl
         self.framebufferOnly = false
         Engine.Ignite(device: device)
-        renderer = Renderer(self)
+        renderer = Renderer()
         self.delegate = renderer
         
     }

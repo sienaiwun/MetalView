@@ -8,15 +8,6 @@ class Renderer:NSObject{
     var resovleColorRT:MTLTexture?
     var bgDepthRT:MTLTexture?
     var baseRenderPassDescriptor:MTLRenderPassDescriptor?
-    init(_ view: MTKView) {
-        super.init()
-        screenSize = FLOAT2(Float(view.drawableSize.width),Float(view.drawableSize.height))
-        
-        createBaseRenderPass()
-        currentScene.camera.input = Engine.input
-     
-    }
-    
     
     private func createBaseRenderPass()
     {
@@ -68,6 +59,7 @@ extension Renderer:MTKViewDelegate
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         screenSize = FLOAT2(Float(size.width),Float(size.height))
         createBaseRenderPass()
+        currentScene.camera.input = Engine.input
     }
     
     
