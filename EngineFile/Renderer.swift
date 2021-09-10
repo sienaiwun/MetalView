@@ -5,13 +5,16 @@ class Renderer:NSObject{
     var currentScene:ObjectScene = ObjectScene(name:"Computer Example")
     var screenSize:FLOAT2 = FLOAT2()
     var bgColorRT:MTLTexture?
+    var resovleColorRT:MTLTexture?
     var bgDepthRT:MTLTexture?
     var baseRenderPassDescriptor:MTLRenderPassDescriptor?
     init(_ view: MTKView) {
         super.init()
         screenSize = FLOAT2(Float(view.drawableSize.width),Float(view.drawableSize.height))
+        
         createBaseRenderPass()
         currentScene.camera.input = Engine.input
+     
     }
     
     
@@ -20,16 +23,37 @@ class Renderer:NSObject{
         let baseColorRTDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: Defines.bgPixelFormat, width: Int(screenSize.x), height:Int(screenSize.y), mipmapped: false)
         baseColorRTDescriptor.usage = [.renderTarget, .shaderRead]
         baseColorRTDescriptor.storageMode = .private
+        baseColorRTDescriptor.textureType = Engine.msaaSample > 1 ? .type2DMultisample : .type2D
+        baseColorRTDescriptor.sampleCount = Engine.msaaSample
         bgColorRT = Engine.Device.makeTexture(descriptor: baseColorRTDescriptor)
+    
+        if(Engine.msaaSample > 1)
+        {
+            let resolveRTDescirptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: Defines.bgPixelFormat, width: Int(screenSize.x), height:Int(screenSize.y), mipmapped: false)
+            resolveRTDescirptor.textureType = .type2D
+            resolveRTDescirptor.sampleCount = 1
+            resovleColorRT = Engine.Device.makeTexture(descriptor: resolveRTDescirptor)
+        }
+       
     
         let baseDepthRTDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: Defines.bgDepthPixelFormatl, width: Int(screenSize.x), height:Int(screenSize.y), mipmapped: false)
         baseDepthRTDescriptor.usage = [.renderTarget]
         baseDepthRTDescriptor.storageMode = .private
+        baseDepthRTDescriptor.textureType = Engine.msaaSample>1 ?.type2DMultisample: .type2D
+        baseDepthRTDescriptor.sampleCount = Engine.msaaSample
         bgDepthRT = Engine.Device.makeTexture(descriptor: baseDepthRTDescriptor)
         
         baseRenderPassDescriptor = MTLRenderPassDescriptor()
         baseRenderPassDescriptor?.colorAttachments[0].texture = bgColorRT!
-        baseRenderPassDescriptor?.colorAttachments[0].storeAction = .store
+        if(Engine.msaaSample>1)
+        {
+            baseRenderPassDescriptor?.colorAttachments[0].resolveTexture = resovleColorRT
+            baseRenderPassDescriptor?.colorAttachments[0].storeAction = .multisampleResolve
+        }
+        else
+        {
+            baseRenderPassDescriptor?.colorAttachments[0].storeAction = .store
+        }
         baseRenderPassDescriptor?.colorAttachments[0].loadAction = .clear
         baseRenderPassDescriptor?.colorAttachments[0].clearColor = Defines.clearColor
         baseRenderPassDescriptor?.depthAttachment.texture = bgDepthRT
@@ -74,7 +98,7 @@ extension Renderer:MTKViewDelegate
         
         let blitEncoder = commandBuffer?.makeBlitCommandEncoder()
             blitEncoder?.label = "View Display Copy Encoder"
-            blitEncoder?.copy(from: bgColorRT!,
+        blitEncoder?.copy(from: Engine.msaaSample > 1 ? resovleColorRT!:bgColorRT!,
                               to: view.currentDrawable!.texture)
             blitEncoder?.endEncoding()
         

@@ -444,8 +444,8 @@
             filePath = "EngineFile/MetalView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "init(coder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,6 +574,163 @@
             endingLineNumber = "12"
             landmarkName = "viewSize"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBD6D691-FEAF-4B49-985B-F3DA5A4522F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EngineFile/Renderer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "createBaseRenderPass()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB3D8ED2-6E8C-418D-B69A-0FD567F9F47B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EngineFile/Renderer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "createBaseRenderPass()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E54BFDAF-92A8-4784-8A3A-3897D2D102D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EngineFile/Renderer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "createBaseRenderPass()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59E47AE6-B773-44B6-963F-24CF4DC85050"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/LauchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "msaaSample"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "59E47AE6-B773-44B6-963F-24CF4DC85050 - a13436f31b7b328c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(msaaSample in _352BA4D304ADED839685518615AEE92B).getter : Swift.Int"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  uuid = "59E47AE6-B773-44B6-963F-24CF4DC85050 - a13436f31b7b328c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(msaaSample in _352BA4D304ADED839685518615AEE92B).getter : Swift.Int"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "559">
+               </Location>
+               <Location
+                  uuid = "59E47AE6-B773-44B6-963F-24CF4DC85050 - a13436f31b7b328c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(msaaSample in _352BA4D304ADED839685518615AEE92B).getter : Swift.Int"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "790">
+               </Location>
+               <Location
+                  uuid = "59E47AE6-B773-44B6-963F-24CF4DC85050 - a13436f31b7b328c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(msaaSample in _352BA4D304ADED839685518615AEE92B).getter : Swift.Int"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1004">
+               </Location>
+               <Location
+                  uuid = "59E47AE6-B773-44B6-963F-24CF4DC85050 - a13436f31b7b328c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MetalViewMAC.LauchViewController.(msaaSample in _352BA4D304ADED839685518615AEE92B).getter : Swift.Int"
+                  moduleName = "MetalViewMAC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sws/Desktop/misc/gitRepo/MetalView/MAC/LauchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1218">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F85F1C5-0562-4C98-8A0B-A75D082BCD9C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MAC/LauchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "Click(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

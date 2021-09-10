@@ -32,7 +32,7 @@ class LauchViewController: NSViewController {
             case "4x":
                 return 4
             case "8x":
-                return 1
+                return 8
             default :
                 return 1
             
@@ -45,15 +45,15 @@ class LauchViewController: NSViewController {
         resButton.removeAllItems()
         resButton.addItems(withTitles: ["1024","512","2048"])
         msaaButton.removeAllItems()
-        msaaButton.addItems(withTitles: ["1x","2x","4x","8x"])
+        msaaButton.addItems(withTitles: ["4x","1x","2x","8x"])
  
     }
     
     @IBAction func Click(_ sender: Any) {
         let vc:ViewController! = NSStoryboard(name: "Mac", bundle: nil).instantiateController(withIdentifier: "ViewController") as! ViewController
         vc.preferredContentSize = viewSize
+        Engine.msaaSample = msaaSample
         self.view.window!.contentViewController = vc
         
-        Engine.msaaSample = msaaSample
     }
 }

@@ -40,6 +40,7 @@ class Basic_RenderPipelineDescriptor:RenderPipelineDescriptor
     {
         let renderPipelineDescriptor = MTLRenderPipelineDescriptor()
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = Defines.bgPixelFormat
+        renderPipelineDescriptor.sampleCount = Engine.msaaSample
         renderPipelineDescriptor.depthAttachmentPixelFormat = Defines.bgDepthPixelFormatl
         renderPipelineDescriptor.vertexFunction = ShaderLibrary.Vertex(.Basic)
         renderPipelineDescriptor.fragmentFunction = ShaderLibrary.Fragment(.Basic)
@@ -57,6 +58,7 @@ class UI_RenderPipelineDescriptor:RenderPipelineDescriptor
     {
         let renderPipelineDescriptor = MTLRenderPipelineDescriptor()
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = Defines.bgPixelFormat
+        renderPipelineDescriptor.sampleCount = Engine.msaaSample
         renderPipelineDescriptor.depthAttachmentPixelFormat = Defines.bgDepthPixelFormatl
         renderPipelineDescriptor.vertexFunction = ShaderLibrary.Vertex(.UI)
         renderPipelineDescriptor.fragmentFunction = ShaderLibrary.Fragment(.Basic)
