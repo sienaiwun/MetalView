@@ -3,10 +3,56 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Renderer.draw(in:):Renderer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_touches">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.mouseDragged(with:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.deltaX">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MetalView.touchesEnded(_:with:):TouchController.swift">
          <PersistentStrings>
             <PersistentString
                value = "_touches">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LauchViewController.viewSize.getter:LauchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "resButton.stringValue">
+            </PersistentString>
+            <PersistentString
+               value = "msaaButton.stringValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.touchesMoved(_:with:):ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Renderer.init(_:):Renderer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.drawableSize.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Renderer.createBaseRenderPass():Renderer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Engine.msaaSample">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,14 +76,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Renderer.draw(in:):Renderer.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "_touches">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "MetalView.touchesBegan(_:with:):TouchController.swift">
          <PersistentStrings>
             <PersistentString
@@ -46,7 +84,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.touchesMoved(_:with:):ViewController.swift">
+         contextName = "LauchViewController.Click(_:):LauchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Engine.msaaSample ">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "ViewController.viewDidLoad():ViewController.swift">

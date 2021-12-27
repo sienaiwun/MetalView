@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  TestMac
-//
-//  Created by sws on 2021/7/1.
-//
-
 import Cocoa
 
 @main

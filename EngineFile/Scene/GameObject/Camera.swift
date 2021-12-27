@@ -19,18 +19,37 @@ class Camera:Node
        
    override func updateModelMatrix() {
         let sensitivess:Float = 0.001
-        if let x = input?.mouseDeltaX as Float? ,let y = input?.mouseDeltaY as Float?
+        if let x = input?.mouseDeltaX ,let y = input?.mouseDeltaY 
         {
             self.setRotationY(self.getRotationY()+x*(-sensitivess))
             self.setRotationX(self.getRotationX()+y*(-sensitivess))
         }
+        let translation_speed:Float = 0.01
+        let fowardDelta = forward * translation_speed;
+        let rightDelta = right * translation_speed;
+        if (input!.keyPressed.contains(KEYS.W.rawValue))
+        {
+            self.setPosition(fowardDelta+self.getPosition())
+        }
+        else if(input!.keyPressed.contains(KEYS.A.rawValue))
+        {
+            self.setPosition(-rightDelta+self.getPosition())
+        }
+        else if (input!.keyPressed.contains(KEYS.D.rawValue))
+        {
+            self.setPosition(rightDelta+self.getPosition())
+        }
+        else if(input!.keyPressed.contains(KEYS.S.rawValue))
+        {
+            self.setPosition(-forward+self.getPosition())
+        }
+            
     #if USE_VIRTUAL_JOYSTICKS
         if let x:Float = input?.joystick?.value_x, let y:Float = input?.joystick?.value_y
         {
-            let translation_speed:Float = 0.01
             let fowardDelta = forward * y * translation_speed;
-            let rightdleta = right * x * translation_speed;
-            self.setPosition(fowardDelta+rightdleta+self.getPosition())
+            let rightDelta = right * x * translation_speed;
+            self.setPosition(fowardDelta+rightDelta+self.getPosition())
         }
     #endif
        _viewMatrix = matrix_identity_float4x4
